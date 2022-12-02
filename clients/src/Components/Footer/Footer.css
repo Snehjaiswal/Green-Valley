@@ -1,0 +1,145 @@
+@import url(https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap);
+
+*{
+  font-family: Prompt,sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+:root {
+    --background: #e9eef2;
+    --color: #212325;
+    --color-2: #444;
+    --color-3: #666;
+    --transition: all 0.25s ease 0s
+}
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+    scroll-behavior: smooth
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size:15px
+    }
+}
+
+@media screen and (max-width: 465px) {
+    html {
+        font-size:14px
+    }
+}
+
+body {
+    margin-bottom: 0px;
+    background: var(--background)
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.copyright {
+  padding: 2rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-3);
+  text-align: center;
+  border-top: 1px solid var(--color-3);
+}
+
+.footer-nav{
+    padding: 1rem 0
+}
+
+.footer-nav .col {
+  max-width: 300px;
+}
+
+p.site-decription {
+  color: var(--color-3);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.social-medias a {
+  color: var(--color-2);
+  width: 3rem;
+  height: 3em;
+  border: 2px solid var(--color-2);
+  border-radius: 50%;
+}
+
+.social-medias svg {
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-start{
+  align-items: flex-start;
+}
+
+.flex-jc-start{
+  justify-content: flex-start;
+}
+
+.flex-around{
+  justify-content: space-around;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-g-1{
+  gap: 1rem;
+}
+
+.col{
+  flex: 1;
+}
+
+.col-list ul li{
+  list-style: none;
+}
+
+.col-list ul li a{
+  text-decoration: none;
+  color: var(--color-3);
+  transition: var(--transition)
+}
+
+.col-list ul li a:hover,
+.col-list ul li a:focus{
+  color: var(--color);
+  text-decoration: underline
+}
+
+
+@media screen and (max-width: 1100px){
+  .footer-nav{
+    flex-direction: column
+  }
+}
+
+footer{
+    padding-bottom: 0%;
+}
