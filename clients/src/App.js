@@ -1,14 +1,12 @@
-import Navbar from './Components/Navbar/Navbar'
-import Footer from './Components/Footer/Footer'
+import Header from "./App/Header/Header";
+import Navbar from "./App/Header/Navbar";
 
 function App() {
   return (
   <> 
-  <Navbar />
-  
-  <h1>Hello</h1>
-  
-  <Footer />
+ 
+<Header />
+<Navbar /> 
   </>
   );
 }
