@@ -13,7 +13,7 @@ function Navbar() {
           <div className="col-lg-2 col-sm-3 col-3 order-1">
             <div className="logo_container">
               <div className="logo">
-                <a href="#">BBB</a>
+                <a href="#">SNEH</a>
               </div>
             </div>
           </div>
@@ -575,8 +575,6 @@ function Navbar() {
         </div>
       </div>
     </div>
-  {/* </header> */}
-  <div style={{ height: 700 }}></div>
 </div>
  </>
   )
