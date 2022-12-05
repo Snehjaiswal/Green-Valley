@@ -3,9 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');
 
-/*********************************
-2. Body and some general stuff
-*********************************/
 
 * {
     margin: 0;
@@ -21,7 +18,12 @@ body {
     font-weight: 400;
     background: #FFFFFF;
     color: #000000;
+    /* overflow: hidden;  */
 }
+
+::-webkit-scrollbar {
+    display: none;
+  }
 
 div {
     display: block;
@@ -265,7 +267,7 @@ section {
 
 .top_bar {
     width: 100%;
-    height: 56px;
+    height: 36px;
     background: #fafafa;
     border-bottom: solid 1px rgba(0, 0, 0, 0.05);
     z-index: 2;
@@ -519,6 +521,7 @@ section {
 }
 
 .header_search_content {
+    border-radius: 20%v;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -550,6 +553,7 @@ section {
     padding-left: 26px;
     color: #7f7f7f;
     float: left;
+    border-radius: 20%;
 }
 
 .header_search_input::-webkit-input-placeholder {
@@ -1033,7 +1037,7 @@ select option {
 *********************************/
 
 .page_menu {
-    margin-top: 15px;
+    /* margin-top: 15px; */
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
@@ -1430,3 +1434,5 @@ select option {
     }
 
 }
+
+
