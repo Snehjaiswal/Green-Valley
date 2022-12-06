@@ -22,7 +22,7 @@ function Navbar() {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto  blockquote">
-              <li className="nav-item dropdown rounded">
+              <li className="nav-item dropdown rounded category ">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -31,12 +31,13 @@ function Navbar() {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i className="bi bi-person-fill me-2" />
-                  <iconify-icon icon="material-symbols:list-rounded"></iconify-icon>
-                  Profile
+                  <i className="categories_title" />
+                 
+                        Category
                 </a>
+           
                 <ul
-                  className="dropdown-menu dropdown-menu-start"
+                  className="dropdown-menu dropdown-menu-center"
                   aria-labelledby="navbarDropdown"
                 >
                   <li>
@@ -50,13 +51,27 @@ function Navbar() {
                     </a>
                   </li>
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
                     <a className="dropdown-item" href="#">
-                      Logout
+                      Another action
+                    </a>
+                  </li>    <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>    <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>    <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>    <li>
+                    <a className="dropdown-item" href="#">
+                      Another action
                     </a>
                   </li>
+               
                 </ul>
               </li>
             </ul>

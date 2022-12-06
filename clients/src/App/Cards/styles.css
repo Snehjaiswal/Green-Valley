@@ -1,0 +1,8 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.card-img, .card-img-bottom, .card-img-top {
+  width: 100%;
+  height: 250px;
+}

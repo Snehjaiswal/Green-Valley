@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +17,28 @@ body {
 
 .navbar-nav .nav-item:hover {
     background-color: rgba(180, 190, 203, 0.4);
-  }
-  
-  
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+    opacity: 0.8;
+}
+
+.category {
+    width: 250px;
+    /* text-align: right;
+    justify-content: right */
+}
+
+.categories_title::before {
+    content: "\e907";
+    font-family: 'plaza-icon';
+    color: #222222;
+    display: inline-block;
+    position: absolute;
+    font-size: 22px;
+    line-height: 0px;
+    left: 0;
+    top: 50%;
+    transform: translatey(-50%);
+}
