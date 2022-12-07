@@ -16,16 +16,10 @@ const bodyParser = require("body-parser");
 
 app.use (bodyParser.urlencoded({extended:true}));
 
-var arr = [1,2,3,4,5,6,7]
 
-var a ={
-    name:"kika",
-    fanme:"kikaa1"
-}
 
 // //simple route
 app.get ("/", (req, res) => {
-
 // res.json({message: "Welcome to Turing.com"})
 res.send({msg:arr,data:a})
 

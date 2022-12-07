@@ -6,7 +6,7 @@ function Header() {
 <>
 
 <div className="super_container">
-   {/* <div className="top_bar">
+   <div className="top_bar">
                 <div className="container_fluid">
                     <div className="row">
                         <div className="col d-flex flex-row headermargin" >
@@ -48,7 +48,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div> 
 
    <div className="header_main">
       <div className="container">
@@ -157,7 +157,7 @@ function Header() {
                       alt=""
                     />
                     <div className="cart_count">
-                      <span>3</span>
+                      <span>2222</span>
                     </div>
                   </div>
                   <div className="cart_content">
