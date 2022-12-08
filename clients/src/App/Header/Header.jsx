@@ -5,8 +5,8 @@ function Header() {
    
 <>
 
-<div className="super_container">
-   {/* <div className="top_bar">
+<div className="super_container bg-light header1">
+    <div className="top_bar">
                 <div className="container_fluid">
                     <div className="row">
                         <div className="col d-flex flex-row headermargin" >
@@ -48,7 +48,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div> 
 
    <div className="header_main">
       <div className="container">
