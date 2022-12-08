@@ -13,6 +13,7 @@ const Cart = () => {
     removeItem,
     emptyCart
   } = useCart();
+ localStorage.setItem('count',totalUniqueItems)
 
   if (isEmpty) return <h1 className="text-center">Cart is Empty</h1>;
   return (
