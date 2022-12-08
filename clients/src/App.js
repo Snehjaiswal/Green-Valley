@@ -18,7 +18,6 @@ function App() {
         
         <Cart />
       </CartProvider>}></Route>
-    {/* <Route exact path='/contact' element={< Contact />}></Route> */}
 </Routes>
 
 
