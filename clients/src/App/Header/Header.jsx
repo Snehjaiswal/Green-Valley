@@ -141,12 +141,12 @@ function Header() {
                     alt=""
                   />
                 </div>
-                <div className="wishlist_content">
+                {/* <div className="wishlist_content">
                   <div className="wishlist_text">
                     <a href="#">Wishlist</a>
                   </div>
                   <div className="wishlist_count">10</div>
-                </div>
+                </div> */}
               </div>
               {/* Cart */}
               <div className="cart">
@@ -160,14 +160,17 @@ function Header() {
                       <span>3</span>
                     </div>
                   </div>
-                  <div className="cart_content">
+                  {/* <div className="cart_content">
                     <div className="cart_text">
                       <a href="#">Cart</a>
                     </div>
                     <div className="cart_price">$185</div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
+
+
+
             </div>
           </div>
         </div>
