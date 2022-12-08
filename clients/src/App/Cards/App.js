@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <CartProvider>
         <Home />
-        <Cart />
+        {/* <Cart /> */}
       </CartProvider>
     </div>
   );

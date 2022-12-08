@@ -1,12 +1,13 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom';
 function Header() {
   return (
    
 <>
 
 <div className="super_container bg-light header1">
-    <div className="top_bar">
+    {/* <div className="top_bar">
                 <div className="container_fluid">
                     <div className="row">
                         <div className="col d-flex flex-row headermargin" >
@@ -48,7 +49,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>  */}
 
    <div className="header_main">
       <div className="container">
@@ -150,6 +151,7 @@ function Header() {
               </div>
               {/* Cart */}
               <div className="cart">
+              <Link to="/cart">
                 <div className="cart_container d-flex flex-row align-items-center justify-content-end">
                   <div className="cart_icon">
                     <img
@@ -160,13 +162,14 @@ function Header() {
                       <span>3</span>
                     </div>
                   </div>
-                  {/* <div className="cart_content">
+                  <div className="cart_content">
                     <div className="cart_text">
                       <a href="#">Cart</a>
                     </div>
                     <div className="cart_price">$185</div>
-                  </div> */}
+                  </div>
                 </div>
+                </Link>
               </div>
 
 

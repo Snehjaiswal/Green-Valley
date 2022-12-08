@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 import './Navbar.css'
 
 
@@ -7,10 +9,12 @@ function Nav2() {
    <>
         <ul className="navbar-nav ml-auto gap-2 blockquote Home11">
               <li className="nav-item rounded Home1">
-                <a className="nav-link active" aria-current="page" href="#">
+              <Link to="/">
+                <a className="nav-link active" aria-current="page">
                   <i className="bi bi-house-fill me-1" />
                   Home
                 </a>
+                </Link>
               </li>
               <li className="nav-item dropdown rounded">
                 <a
