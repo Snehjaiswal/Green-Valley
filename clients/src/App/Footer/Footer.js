@@ -29,22 +29,9 @@ function Footer() {
                 UI Design
               </a>
             </li>
-            <li>
-              <a href="http://scanfcode.com/category/back-end-development/">
-                PHP
-              </a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/category/java-programming-language/">
-                Java
-              </a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/category/android/">Android</a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/category/templates/">Templates</a>
-            </li>
+         
+          
+           
           </ul>
         </div>
         <div className="col-xs-6 col-md-3">
