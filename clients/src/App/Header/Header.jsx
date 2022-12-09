@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { useCart } from "react-use-cart";
 
 function Header() {
-  const { totalUniqueItems } = useCart();
+  const { totalUniqueItems,cartTotal } = useCart();
 
   const count = localStorage.getItem('count')
+  const prize = localStorage.getItem('prize')
+
 
 
 
@@ -172,7 +174,7 @@ function Header() {
                           <div className="cart_text">
                             <a href="#">Cart</a>
                           </div>
-                          <div className="cart_price">$185</div>
+                          <div className="cart_price">{prize}</div>
                         </div>
                       </div>
                     </Link>

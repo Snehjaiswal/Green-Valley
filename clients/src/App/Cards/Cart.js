@@ -14,6 +14,8 @@ const Cart = () => {
     emptyCart
   } = useCart();
  localStorage.setItem('count',totalUniqueItems)
+ localStorage.setItem('prize',cartTotal)
+
 
   if (isEmpty) return <h1 className="text-center">Cart is Empty</h1>;
   return (
