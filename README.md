@@ -1,14 +1,15 @@
 # Mern-Ecommerce-Project                                                                                                                 ##START DATE :- 01-12-2022
 This project base on ecommerce and fullly advance.
 
-   Roles :-
+   #Roles :-
    
 1. ADMIN
 2. BUYER 
 3. SELLER
 
 
-   Feathures :-
+   #Feathures :-
+   
 1. Login With Authentication
 2. Login Multypal Types 
 3. Validations
@@ -21,7 +22,7 @@ This project base on ecommerce and fullly advance.
 
 
 
-   Technologys  
+   #Technologys  
    
 1. NodeJS(backend)
 2. ReactJS(frontend)
