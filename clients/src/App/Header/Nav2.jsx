@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { useNavigate } from "react-router-dom";
+import { Link ,useNavigate} from 'react-router-dom';
+
 
 import './Navbar.css'
 
@@ -19,128 +19,75 @@ function Nav2() {
   }
   return (
    <>
-        <ul className="navbar-nav ml-auto gap-2 blockquote Home11">
-              <li className="nav-item rounded Home1">
-                <a className="nav-link active" aria-current="page"  onClick={home}>
+        {/* <ul className="navbar-nav ml-auto gap-2 blockquote Home11">
+              <Link className="nav-item rounded Home1" to='/'>
+                 <a className="nav-link active"   onClick={home}> 
                   <i className="bi bi-house-fill me-1" />
                   Home
                 </a>
-              </li>
-              <li className="nav-item dropdown rounded">
+              </Link>
+              <li className="nav-item ">
                 <a
-                  className="nav-link dropdown-toggle text-dark"
+                  className="nav-link "
                   href="#"
-                  id="navbarDropdown"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  
                 >
                   <i className="bi bi-person-fill me-2 text-dark" />
                   Shop
                 </a>
-                <ul
-                  className="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Account
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
               </li>
-              <li className="nav-item dropdown rounded">
+              <li className="nav-item ">
                 <a
-                  className="nav-link dropdown-toggle text-dark"
+                  className="nav-link "
                   href="#"
-                  id="navbarDropdown"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  
                 >
                   <i className="bi bi-person-fill me-2" />
                   Blog
                 </a>
-                <ul
-                  className="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Account
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
+              
               </li>
-              <li className="nav-item dropdown rounded">
+              <li className="nav-item ">
                 <a
-                  className="nav-link dropdown-toggle text-dark"
+                  className="nav-link "
                   href="#"
-                  id="navbarDropdown"
                   role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+                  
                 >
                   <i className="bi bi-person-fill me-2" />
                   Profile
                 </a>
-                <ul
-                  className="dropdown-menu dropdown-menu-end"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Account
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
+              
               </li>
-              <li   onClick={contact}>
+              <li>
                 <a className="nav-link text-dark" aria-current="page" >
                   <i className="bi bi-house-fill me-1" />
                   CONTACT US
                 </a>
               </li>
-            </ul>
+            </ul> */}
+
+
+<ul className="navbar-nav gap-2 ">
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Shop</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Green Grocer</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Blogs</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Contact</a>
+        </li>
+      
+      </ul>
 
    </>
   )

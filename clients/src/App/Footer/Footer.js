@@ -3,97 +3,100 @@ import './Footer.css'
 function Footer() {
   return (
 <>
-  {/* Site footer */}
-  <footer className="site-footer">
-    <div className="container">
-      <div className="row">
-        <div className="col-sm-12 col-md-6">
-          <h6>About</h6>
-          <p className="text-justify">
-            Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to
-            help the upcoming programmers with the code. Scanfcode focuses on
-            providing the most efficient code or snippets as the code wants to
-            be simple. We will help programmers build up concepts in different
-            programming languages that include C, C++, Java, HTML, CSS,
-            Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.
-          </p>
-        </div>
-        <div className="col-xs-6 col-md-3">
-          <h6>Categories</h6>
-          <ul className="footer-links">
-            <li>
-              <a href="http://scanfcode.com/category/c-language/">C</a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/category/front-end-development/">
-                UI Design
+<footer id="footer">
+  <div className="container">
+    <div className="row">
+<hr />
+      <div className="col-md-4">
+        <div className="footer-box">
+          <div className="footer-title">
+            <h5>Download Our Mobile App</h5>
+          </div>
+          <div className="footer-desc">
+            <p>
+              Molestiae reiciendis neque arcu! Tempor reprehenderit accusantium
+              quibusdam iste accusan.
+            </p>
+          </div>
+          <div className="app-img">
+            <div className="app-store">
+              <a href="#">
+                <img src="images/play-store.png" alt="" />
               </a>
-            </li>
-         
-          
-           
-          </ul>
-        </div>
-        <div className="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
-          <ul className="footer-links">
-            <li>
-              <a href="http://scanfcode.com/about/">About Us</a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/contact/">Contact Us</a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/contribute-at-scanfcode/">
-                Contribute
+            </div>
+            <div className="app-store">
+              <a href="#">
+                <img src="images/app-store.png" alt="" />
               </a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="http://scanfcode.com/sitemap/">Sitemap</a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <hr />
-    </div>
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 col-sm-6 col-xs-12">
-          <p className="copyright-text">
-            Copyright © 2017 All Rights Reserved by
-            <a href="#">Scanfcode</a>.
-          </p>
+      <div className="col-md-4">
+        <div className="footer-box">
+          <div className="footer-title">
+            <div className="footer-logo">
+              <img src="images/logo02.png" alt="" />
+            </div>
+          </div>
+          <div className="footer-desc">
+            <p style={{ textAlign: "center" }}>
+              Molestiae reiciendis neque arcu! Tempor reprehenderit accusantium
+              quibusdam iste accusan.
+            </p>
+          </div>
         </div>
-        <div className="col-md-4 col-sm-6 col-xs-12">
-          <ul className="social-icons">
-            <li>
-              <a className="facebook" href="#">
-                <i className="fa fa-facebook" />
-              </a>
-            </li>
-            <li>
-              <a className="twitter" href="#">
-                <i className="fa fa-twitter" />
-              </a>
-            </li>
-            <li>
-              <a className="dribbble" href="#">
-                <i className="fa fa-dribbble" />
-              </a>
-            </li>
-            <li>
-              <a className="linkedin" href="#">
-                <i className="fa fa-linkedin" />
-              </a>
-            </li>
-          </ul>
+      </div>
+      <div className="col-md-2">
+        <div className="footer-box">
+          <div className="footer-title">
+            <h5>Quick Links</h5>
+          </div>
+          <div className="footer-desc">
+            <ul>
+              <li>
+                <a className="nav-link text-dark" href="#">Know More About Us</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Visit Store</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Let's Connect</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Locate Store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-2">
+        <div className="footer-box">
+          <div className="footer-title">
+            <h5>Sites Links</h5>
+          </div>
+          <div className="footer-desc">
+            <ul>
+              <li>
+                <a className="nav-link text-dark" href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Shipping Details</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Offer Coupons</a>
+              </li>
+              <li>
+                <a className="nav-link text-dark" href="#">Terms &amp; Conditions</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
+
 </>
 
   )

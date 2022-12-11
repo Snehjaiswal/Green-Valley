@@ -1,5 +1,8 @@
 import React from 'react'
 import './Home.css'
+import Home2 from './Home2'
+import Home3 from './Home3'
+
 
 import img1 from '../images/1.jpg'
 import img2 from '../images/2.jpg'
@@ -46,6 +49,8 @@ function Home() {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+<Home2 />
+<Home3 />
 
   </>
   )

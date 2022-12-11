@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from "react-use-cart";
 
 function Header() {
-  const { totalUniqueItems,cartTotal } = useCart();
+  const { totalUniqueItems, cartTotal } = useCart();
 
   const count = localStorage.getItem('count')
   const prize = localStorage.getItem('prize')
@@ -71,7 +71,7 @@ function Header() {
                 </div>
               </div>
               {/* Search */}
-              <div className="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+              <div className="col-lg-4 col-12 order-lg-2 order-3 text-lg-left text-right">
                 <div className="header_search">
                   <div className="header_search_content">
                     <div className="header_search_form_container">
@@ -82,49 +82,6 @@ function Header() {
                           className="header_search_input"
                           placeholder="Search for products..."
                         />
-                        <div
-                          className="custom_dropdown"
-                          style={{ display: "none" }}
-                        >
-                          <div className="custom_dropdown_list">
-                            <span className="custom_dropdown_placeholder clc">
-                              All Categories
-                            </span>
-                            <i className="fas fa-chevron-down" />
-                            <ul className="custom_list clc">
-                              <li>
-                                <a className="clc" href="#">
-                                  All Categories
-                                </a>
-                              </li>
-                              <li>
-                                <a className="clc" href="#">
-                                  Computers
-                                </a>
-                              </li>
-                              <li>
-                                <a className="clc" href="#">
-                                  Laptops
-                                </a>
-                              </li>
-                              <li>
-                                <a className="clc" href="#">
-                                  Cameras
-                                </a>
-                              </li>
-                              <li>
-                                <a className="clc" href="#">
-                                  Hardware
-                                </a>
-                              </li>
-                              <li>
-                                <a className="clc" href="#">
-                                  Smartphones
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
                         <button
                           type="submit"
                           className="header_search_button trans_300"
@@ -140,6 +97,7 @@ function Header() {
                   </div>
                 </div>
               </div>
+
               {/* Wishlist */}
               <div className="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
                 <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
@@ -150,12 +108,12 @@ function Header() {
                         alt=""
                       />
                     </div>
-                    {/* <div className="wishlist_content">
-                  <div className="wishlist_text">
-                    <a href="#">Wishlist</a>
-                  </div>
-                  <div className="wishlist_count">10</div>
-                </div> */}
+                    <div className="wishlist_content">
+                      <div className="wishlist_text">
+                        <a href="#">Wishlist</a>
+                      </div>
+                      <div className="wishlist_count">10</div>
+                    </div>
                   </div>
                   {/* Cart */}
                   <div className="cart">
@@ -174,16 +132,38 @@ function Header() {
                           <div className="cart_text">
                             <a href="#">Cart</a>
                           </div>
-                          <div className="cart_price">{prize}</div>
+                          <div className="cart_price">RS. {prize}</div>
                         </div>
                       </div>
                     </Link>
                   </div>
 
+                </div>
+              </div>
+
+              {/* Profile Login */}
+
+              <div className="col-lg-2 col-9 order-lg-4 order-2 text-lg-left text-right">
+                <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                  <div className="wishlist d-flex flex-row align-items-center justify-content-end">
+                    <div className="wishlist_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                      </svg>
+                    </div>
+                    <div className="wishlist_content">
+                      <div className="wishlist_text">
+                        <a href="#">Profile </a>
+                      </div>
+                    </div>
+                  </div>
 
 
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>
