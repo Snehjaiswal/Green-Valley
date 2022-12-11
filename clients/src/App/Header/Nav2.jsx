@@ -13,6 +13,18 @@ function Nav2() {
     navigate('/home');
 
   }
+  const shop =()=>{
+    navigate('/shop');
+
+  }
+  const green =()=>{
+    navigate('/green');
+
+  }
+  const blogs =()=>{
+    navigate('/blog');
+
+  }
   const contact =()=>{
     navigate('/contact');
 
@@ -72,19 +84,19 @@ function Nav2() {
 
 <ul className="navbar-nav gap-2 ">
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Home</a>
+          <a className="nav-link text-dark" onClick={home}>Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Shop</a>
+          <a className="nav-link text-dark" onClick={shop}>Shop</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Green Grocer</a>
+          <a className="nav-link text-dark" onClick={green}>Green Grocer</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Blogs</a>
+          <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Contact</a>
+          <a className="nav-link text-dark"onClick={contact} >Contact</a>
         </li>
       
       </ul>
