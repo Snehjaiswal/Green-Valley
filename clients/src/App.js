@@ -21,10 +21,10 @@ function App() {
           <Cart />
           </CartProvider>}></Route>
           <Route path="/home" element={<Home/>}/> 
-          <Route path="/shop" element={<Blogs/>}/>
-          <Route path="/blog" element={<Shop/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/green" element={<Grocer/>}/>
+          <Route path="/shop" element={<App1/>}/>
+          <Route path="/blog" element={<Blogs/>}/>
+          {/* <Route path="/contact" element={<Contact/>}/> */}
+          <Route path="/grocer" element={<Grocer/>}/>
       </Routes>
       <Footer />
 

@@ -1,101 +1,116 @@
 import React from 'react'
-import './Footer.css'
+import '../App.css'
+
 function Footer() {
   return (
 <>
-<footer id="footer">
+<section className="contact-sec sec-pad">
   <div className="container">
     <div className="row">
 <hr />
-      <div className="col-md-4">
-        <div className="footer-box">
-          <div className="footer-title">
-            <h5>Download Our Mobile App</h5>
-          </div>
-          <div className="footer-desc">
-            <p>
-              Molestiae reiciendis neque arcu! Tempor reprehenderit accusantium
-              quibusdam iste accusan.
-            </p>
-          </div>
-          <div className="app-img">
-            <div className="app-store">
-              <a href="#">
-                <img src="images/play-store.png" alt="" />
+      <div className="col-md-6">
+        <div className="contact-detail">
+          <h1 className="section-title">Contact us</h1>
+          <ul className="contact-ul FooterContact">
+            <li>
+              <i className="fa fa-location-dot" /> 
+              01,Arany Nagar, Schema No. 78,
+              Indore
+            </li>
+            <li>
+              <i className="fa fa-phone" />
+              <a href="tel:08510004495">
+                <b>704951XXXX</b>
               </a>
-            </div>
-            <div className="app-store">
-              <a href="#">
-                <img src="images/app-store.png" alt="" />
+            
+            </li>
+            <li>
+              <i className="fa-solid fa-envelope" />
+              <a href="mailto:pardeepkumar4bjp@gmail.com">
+                <b> GreenValley@gmail.com</b>
               </a>
+            </li>
+          </ul>
+          <span>
+            <a href="#" className="fb">
+              <i className="fa-brands fa-facebook" />
+            </a>
+            <a href="#" className="insta">
+              <i className="fa-brands fa-instagram" />
+            </a>
+            <a href="#" className="twitter">
+              <i className="fa-brands fa-twitter" />
+            </a>
+          </span>
+        </div>
+      </div>
+      <div className="col-md-6">
+        <form action="#" className="contFrm" method="POST">
+          <div className="row">
+            <div className="col-sm-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="inptFld"
+                required=""
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                className="inptFld"
+                required=""
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                className="inptFld"
+                required=""
+              />
+            </div>
+            <div className="col-sm-6">
+              <input
+                type="text"
+                name="sub"
+                placeholder="Subject"
+                className="inptFld"
+                required=""
+              />
+            </div>
+            <div className="col-12">
+              <textarea
+                className="inptFld"
+                rows=""
+                cols=""
+                placeholder="Your Message..."
+                required=""
+                defaultValue={""}
+              />
+            </div>
+            <div className="col-12">
+              <input
+                type="submit"
+                name="submit"
+                defaultValue="SUBMIT"
+                className="inptBtn"
+              />
             </div>
           </div>
-        </div>
-      </div>
-      <div className="col-md-4">
-        <div className="footer-box">
-          <div className="footer-title">
-            <div className="footer-logo">
-              <img src="images/logo02.png" alt="" />
-            </div>
-          </div>
-          <div className="footer-desc">
-            <p style={{ textAlign: "center" }}>
-              Molestiae reiciendis neque arcu! Tempor reprehenderit accusantium
-              quibusdam iste accusan.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-2">
-        <div className="footer-box">
-          <div className="footer-title">
-            <h5>Quick Links</h5>
-          </div>
-          <div className="footer-desc">
-            <ul>
-              <li>
-                <a className="nav-link text-dark" href="#">Know More About Us</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Visit Store</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Let's Connect</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Locate Store</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="col-md-2">
-        <div className="footer-box">
-          <div className="footer-title">
-            <h5>Sites Links</h5>
-          </div>
-          <div className="footer-desc">
-            <ul>
-              <li>
-                <a className="nav-link text-dark" href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Shipping Details</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Offer Coupons</a>
-              </li>
-              <li>
-                <a className="nav-link text-dark" href="#">Terms &amp; Conditions</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
+    <div style={{ textAlign: "center", marginTop: 20 }}>
+      <p> Copyright © All rights reserved | Ajeet</p>
+    </div>
   </div>
-</footer>
+</section>
+
 
 </>
 

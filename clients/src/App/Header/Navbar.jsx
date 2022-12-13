@@ -1,5 +1,4 @@
 import React from 'react'
-import './Navbar.css'
 import Nav2 from './Nav2'
 import Nav3 from './Nav3'
 
@@ -24,9 +23,9 @@ function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
 
-          <ul className="navbar-nav ml-auto blockquote" id='box11'>
+           <ul className="navbar-nav ml-auto blockquote" >  {/*id='box11' */}
             <li className="nav-item dropdown rounded category ">
-              {/* <i class="bi bi-menu-button-wide"></i> */}
+        
 
               <a
                 className="nav-link dropdown-toggle text-dark"

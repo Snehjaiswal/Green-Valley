@@ -2,7 +2,6 @@ import React from 'react'
 import { Link ,useNavigate} from 'react-router-dom';
 
 
-import './Navbar.css'
 
 
 function Nav2() {
@@ -17,8 +16,8 @@ function Nav2() {
     navigate('/shop');
 
   }
-  const green =()=>{
-    navigate('/green');
+  const grocer =()=>{
+    navigate('/grocer');
 
   }
   const blogs =()=>{
@@ -90,14 +89,14 @@ function Nav2() {
           <a className="nav-link text-dark" onClick={shop}>Shop</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" onClick={green}>Green Grocer</a>
+          <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
         </li>
         <li className="nav-item">
           <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <a className="nav-link text-dark"onClick={contact} >Contact</a>
-        </li>
+        </li> */}
       
       </ul>
 
