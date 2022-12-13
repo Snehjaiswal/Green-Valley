@@ -6,7 +6,10 @@ import App1 from './App/Cards/App'
 import { Route, Routes } from 'react-router-dom';
 import Cart from "./App/Cards/Cart";
 import { CartProvider } from "react-use-cart";
-import Home1 from "./App/Header/Nav2";
+import Shop from "./App/Shop/Shop";
+import Blogs from "./App/Blogs/Blogs";
+import Contact from "./App/Contact/Contact";
+import Grocer from "./App/Grocers/Grocer";
 function App() {
   return (
     <>
@@ -17,7 +20,11 @@ function App() {
         <Route path='/cart' element={<CartProvider>   
           <Cart />
           </CartProvider>}></Route>
-          <Route path="/" element={<Home1/>}/> 
+          <Route path="/home" element={<Home/>}/> 
+          <Route path="/shop" element={<App1/>}/>
+          <Route path="/blog" element={<Blogs/>}/>
+          {/* <Route path="/contact" element={<Contact/>}/> */}
+          <Route path="/grocer" element={<Grocer/>}/>
       </Routes>
       <Footer />
 

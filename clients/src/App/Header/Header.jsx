@@ -15,7 +15,7 @@ function Header() {
   return (
     <>
       <div className="super_container bg-light header1">
-        {/* <div className="top_bar">
+         <div className="top_bar">
                 <div className="container_fluid">
                     <div className="row">
                         <div className="col d-flex flex-row headermargin" >
@@ -57,7 +57,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-            </div>  */}
+            </div>  
 
         <div className="header_main">
           <div className="container">
@@ -66,7 +66,7 @@ function Header() {
               <div className="col-lg-2 col-sm-3 col-3 order-1">
                 <div className="logo_container">
                   <div className="logo">
-                    <a href="#">SNEH</a>
+                    <a href="#">GreenValley</a>
                   </div>
                 </div>
               </div>

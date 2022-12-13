@@ -6,7 +6,11 @@ const Home = () => {
 
   return (
     <>
-      <h1 className="text-center mt-3">Green Vally</h1><hr />
+      {/* <h1 className="text-center mt-3">Green Vally</h1><hr /> */}
+
+      <div className="eight">
+        <h1 className='GrocerHeading'>Green Vally</h1>
+      </div>
       <section className="py-4 container">
         <div className="row justify-content-center">
           {data.productData.map((item, index) => {

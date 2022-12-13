@@ -2,7 +2,6 @@ import React from 'react'
 import { Link ,useNavigate} from 'react-router-dom';
 
 
-import './Navbar.css'
 
 
 function Nav2() {
@@ -11,6 +10,18 @@ function Nav2() {
  
   const home =()=>{
     navigate('/home');
+
+  }
+  const shop =()=>{
+    navigate('/shop');
+
+  }
+  const grocer =()=>{
+    navigate('/grocer');
+
+  }
+  const blogs =()=>{
+    navigate('/blog');
 
   }
   const contact =()=>{
@@ -72,20 +83,20 @@ function Nav2() {
 
 <ul className="navbar-nav gap-2 ">
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Home</a>
+          <a className="nav-link text-dark" onClick={home}>Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Shop</a>
+          <a className="nav-link text-dark" onClick={shop}>Shop</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Green Grocer</a>
+          <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Blogs</a>
+          <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
         </li>
-        <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Contact</a>
-        </li>
+        {/* <li className="nav-item">
+          <a className="nav-link text-dark"onClick={contact} >Contact</a>
+        </li> */}
       
       </ul>
 
