@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Header />
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
         <Route path='/cart' element={<CartProvider>   
