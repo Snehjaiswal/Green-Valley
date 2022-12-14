@@ -10,6 +10,7 @@ import Shop from "./App/Shop/Shop";
 import Blogs from "./App/Blogs/Blogs";
 import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
+
 function App() {
   return (
     <>
