@@ -22,6 +22,12 @@ This project base on ecommerce and fullly advance.
 7. Buyer(customer) profile
 8. Live chat
 9. Advertisement System
+10. Blogs Add, View and Shar
+11. Filter 
+12. Explanation Vegetable's 
+13. Card and Like  in products
+14. Feedback  and Review System
+
 
 
 
