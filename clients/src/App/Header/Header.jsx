@@ -8,7 +8,18 @@ import Nav3 from './Nav3'
 
 
 function Header() {
-  const { totalUniqueItems, cartTotal } = useCart();
+  const {
+    isEmpty,
+    totalUniqueItems,
+    items,
+    totalItems,
+    cartTotal,
+    updateItemQuantity,
+    removeItem,
+    emptyCart
+  } = useCart();
+
+  console.log("cartTotal",cartTotal);
 
   const count = localStorage.getItem('count')
   const prize = localStorage.getItem('prize')
@@ -95,7 +106,7 @@ function Header() {
                           <div className="cart_text">
                             <a href="#">Cart</a>
                           </div>
-                          <div className="cart_price">RS. {prize}</div>
+                          <div className="cart_price">RS. {cartTotal}</div>
                         </div>
                       </div>
                     </Link>

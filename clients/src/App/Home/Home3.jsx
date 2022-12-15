@@ -5,6 +5,14 @@ import Spinach from '../images/Spinach.jpg'
 import Garlic from '../images/Garlic.jpg'
 import Carrots from '../images/Carrots.jpg'
 import Broccoli from '../images/Broccoli.jpg'
+import img4 from '../images/4.jpg'
+import img5 from '../images/5.jpg'
+import img6 from '../images/6.jpg'
+import img7 from '../images/7.jpg'
+import img8 from '../images/8.jpg'
+import img9 from '../images/9.jpg'
+import img10 from '../images/10.jpg'
+import img11 from '../images/11.jpg'
 
 
 function Home3() {
@@ -98,12 +106,12 @@ function Home3() {
         <section id="collections">
           <div className="container">
             <div className="c-1">
-              <div className="c-1-image-holder"> <img src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412550/E-commerce%20landing%20page/suit-collections/suit-collection-img_3x.jpg" alt="image" /> </div>
+              <div className="c-1-image-holder"> <img src={img5} alt="image" /> </div>
             </div>
             <div className="c-2">
               <h2>featured collection</h2>
               <hr />
-              <div className="c-2-image-holder"> <img className="left" src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412552/E-commerce%20landing%20page/suit-collections/collection-2-img_3x.jpg" alt /><img className="right" src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412552/E-commerce%20landing%20page/suit-collections/collection-1-img_3x.jpg" alt /></div>
+              <div className="c-2-image-holder"> <img className="left" src={img4} alt /><img className="right" src={img6} alt /></div>
               <p className="button">view all collections</p>
             </div>
           </div>
@@ -116,7 +124,7 @@ function Home3() {
             </div>
             <div className="blog-content">
               <div className="blog-1">
-                <div className="blog-1-image-holder"> <img src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412548/E-commerce%20landing%20page/blog/blog-2-img_3x.jpg" alt="image" /> </div>
+                <div className="blog-1-image-holder"> <img src={img7} alt="image" /> </div>
                 <div className="blog-1-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>
@@ -125,7 +133,7 @@ function Home3() {
                 </div>
               </div>
               <div className="blog-2">
-                <div className="blog-2-image-holder"> <img src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412543/E-commerce%20landing%20page/blog/blog-1-img_3x.jpg" alt="image" /> </div>
+                <div className="blog-2-image-holder"> <img src={img8} alt="image" /> </div>
                 <div className="blog-2-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>
