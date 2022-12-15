@@ -23,7 +23,7 @@ function Navbar() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
 
-           <ul className="navbar-nav ml-auto blockquote" >  {/*id='box11' */}
+           {/* <ul className="navbar-nav ml-auto blockquote" > 
             <li className="nav-item dropdown rounded category ">
         
 
@@ -78,7 +78,7 @@ function Navbar() {
 
               </ul>
             </li>
-          </ul>
+          </ul> */}
 
           <Nav2 />
           <Nav3 />
