@@ -1,9 +1,7 @@
 import React from 'react'
-// import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate} from 'react-router-dom';
 import { useCart } from "react-use-cart";
-import Nav2 from './Nav2'
-import Nav3 from './Nav3'
+import { Dropdown } from "react-bootstrap";
 
 
 
@@ -19,7 +17,31 @@ function Header() {
     emptyCart
   } = useCart();
 
-  console.log("cartTotal",cartTotal);
+
+  const navigate = useNavigate();
+
+ 
+  const home =()=>{
+    navigate('/home');
+
+  }
+  const shop =()=>{
+    navigate('/shop');
+
+  }
+  const grocer =()=>{
+    navigate('/grocer');
+
+  }
+  const blogs =()=>{
+    navigate('/blog');
+
+  }
+  const contact =()=>{
+    navigate('/contact');
+
+  }
+
 
   const count = localStorage.getItem('count')
   const prize = localStorage.getItem('prize')
@@ -126,9 +148,32 @@ function Header() {
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                       </svg>
                     </div>
-                    <div className="wishlist_content">
-                      <div className="wishlist_text">
-                        <a href="#">Profile </a>
+                    
+                    <div className="profile_content">
+                      <div className="profile_text">
+                      <Dropdown>
+                       
+                       <Dropdown.Toggle variant="" id="dropdown-basic">
+                       
+                       </Dropdown.Toggle>
+               
+                       <Dropdown.Menu>
+                         <Dropdown.Item>
+                           Settings
+                         </Dropdown.Item>
+               
+                         <Dropdown.Item>
+                           Change Password
+                         </Dropdown.Item>
+                         <Dropdown.Item href="#/action-2">Activity Log</Dropdown.Item>
+                         <Dropdown.Item href="#/action-3">Messages</Dropdown.Item>
+                         <Dropdown.Divider />
+                         <Dropdown.Item >
+                           Logout
+                         </Dropdown.Item>
+                       </Dropdown.Menu>
+                     </Dropdown>
+                        {/* <a href="#">Profile </a> */}
                       </div>
                     </div>
                   </div>
@@ -139,6 +184,114 @@ function Header() {
             </div>
           </div>
         </div>
+
+
+
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
+
+<a className="navbar-brand" href="#" />
+<button
+  className="navbar-toggler"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarNav"
+  aria-controls="navbarNav"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <span className="navbar-toggler-icon" />
+</button>
+
+<div className="collapse navbar-collapse" id="navbarNav">
+
+  <ul className="navbar-nav ml-auto blockquote" >  
+    <li className="nav-item dropdown rounded category ">
+
+
+      <a
+        className="nav-link dropdown-toggle text-dark"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        style={{ textAlign: 'right' }}
+      >
+
+        CATEGORY
+      </a>
+
+      <ul
+        className="dropdown-menu dropdown-menu-center"
+        aria-labelledby="navbarDropdown"
+      >
+        <li>
+          <a className="dropdown-item" href="#">
+            Account
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>    <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>    <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>    <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>    <li>
+          <a className="dropdown-item" href="#">
+            Another action
+          </a>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+
+  <ul className="navbar-nav gap-2 ">
+<li className="nav-item">
+  <a className="nav-link text-dark" onClick={home}>Home</a>
+</li>
+<li className="nav-item">
+  <a className="nav-link text-dark" onClick={shop}>Shop</a>
+</li>
+<li className="nav-item">
+  <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
+</li>
+<li className="nav-item">
+  <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
+</li>
+{/* <li className="nav-item">
+  <a className="nav-link text-dark"onClick={contact} >Contact</a>
+</li> */}
+
+</ul>
+
+<ul className="navbar-nav ms-auto gap-3 Nav3">
+        <li className="nav-item rounded bg-light ">                    
+                Call Support: 0123456789
+        
+        </li>
+    </ul>
+ 
+</div>
+
+</nav>
+
+        
       </div>
 
 
@@ -148,85 +301,6 @@ function Header() {
 
       {/* Navbar */}
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
-
-        <a className="navbar-brand" href="#" />
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarNav">
-
-          <ul className="navbar-nav ml-auto blockquote" >  {/*id='box11' */}
-            <li className="nav-item dropdown rounded category ">
-
-
-              <a
-                className="nav-link dropdown-toggle text-dark"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style={{ textAlign: 'right' }}
-              >
-
-                CATEGORY
-              </a>
-
-              <ul
-                className="dropdown-menu dropdown-menu-center"
-                aria-labelledby="navbarDropdown"
-              >
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Account
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>    <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>    <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>    <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>    <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-          </ul>
-
-          <Nav2 />
-          <Nav3 />
-        </div>
-
-      </nav>
 
 
 

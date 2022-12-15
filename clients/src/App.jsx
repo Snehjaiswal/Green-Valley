@@ -1,5 +1,5 @@
 import Header from "./App/Header/Header";
-import Navbar from "./App/Header/Navbar";
+// import Navbar from "./App/Header/Navbar";
 import Home from './App/Home/Home'
 import Footer from "./App/Footer/Footer";
 import App1 from './App/Cards/App'
@@ -10,7 +10,7 @@ import Shop from "./App/Shop/Shop";
 import Blogs from "./App/Blogs/Blogs";
 import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
-
+import Grocerhome from './App/Grocers/Grocerhome'
 function App() {
   return (
     <>
@@ -26,6 +26,8 @@ function App() {
           <Route path="/blog" element={<Blogs/>}/>
           {/* <Route path="/contact" element={<Contact/>}/> */}
           <Route path="/grocer" element={<Grocer/>}/>
+          <Route path="/grocerhome" element={<Grocerhome/>}/>
+
       </Routes>
       <Footer />
 

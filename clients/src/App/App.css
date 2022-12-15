@@ -777,6 +777,30 @@ select option {
     font-size: 14px;
 }
 
+
+
+.profile_content {
+    margin-left: 14px;
+}
+
+.profile_text a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.profile_text a:hover {
+    color: #070707e8;
+}
+
+
+
+
 .cart_count {
     position: absolute;
     bottom: -1px;
@@ -1894,6 +1918,7 @@ button .my-btn {
 .links .view:hover {
     background-color: #222;
     color: #FFF;
+    margin-right: 10px !important;
 }
 
 .links .view,
