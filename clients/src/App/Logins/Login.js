@@ -1,9 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
-
   const navigate = useNavigate();
+
+  const [email, setemail] = useState("");
+console.log("email",email);
 
 
   const Registration = () => {
@@ -18,7 +20,7 @@ function Login() {
       <div class="main">
         <h1>Login</h1>
         <div class="un">
-          <input type="text" placeholder="Username / Email" required />
+          <input type="text" placeholder="Username/Email" onChange={(e)=>{setemail(e.target.value)}}  required />
         </div>
 
         <div class="orp">

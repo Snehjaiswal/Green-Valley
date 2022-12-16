@@ -30,7 +30,7 @@ const GrocersData = [
     Followers:"1 M"
   }
 ]
-console.log("GrocersData",GrocersData);
+
 
   return (
     <>  
