@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link ,useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from "react-use-cart";
 import { Dropdown } from "react-bootstrap";
 
@@ -20,24 +20,24 @@ function Header() {
 
   const navigate = useNavigate();
 
- 
-  const home =()=>{
+
+  const home = () => {
     navigate('/home');
 
   }
-  const shop =()=>{
+  const shop = () => {
     navigate('/shop');
 
   }
-  const grocer =()=>{
+  const grocer = () => {
     navigate('/grocer');
 
   }
-  const blogs =()=>{
+  const blogs = () => {
     navigate('/blog');
 
   }
-  const contact =()=>{
+  const contact = () => {
     navigate('/contact');
 
   }
@@ -53,11 +53,10 @@ function Header() {
     <>
       <div className="super_container bg-light header1">
 
-
-        {/* Header */}
         <div className="header_main">
           <div className="container">
             <div className="row">
+
               {/* Logo */}
               <div className="col-lg-2 col-sm-3 col-3 order-1">
                 <div className="logo_container">
@@ -138,7 +137,6 @@ function Header() {
               </div>
 
               {/* Profile Login */}
-
               <div className="col-lg-2 col-9 order-lg-4 order-2 text-lg-left text-right">
                 <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                   <div className="wishlist d-flex flex-row align-items-center justify-content-end">
@@ -148,46 +146,47 @@ function Header() {
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                       </svg>
                     </div>
-                    
+
                     <div className="profile_content">
                       <div className="profile_text">
-                      <Dropdown>
-                       
-                       <Dropdown.Toggle variant="" id="dropdown-basic">
-                       
-                       </Dropdown.Toggle>
-               
-                       <Dropdown.Menu>
-                         <Dropdown.Item>
-                           Settings
-                         </Dropdown.Item>
-               
-                         <Dropdown.Item>
-                           Change Password
-                         </Dropdown.Item>
-                         <Dropdown.Item href="#/action-2">Activity Log</Dropdown.Item>
-                         <Dropdown.Item href="#/action-3">Messages</Dropdown.Item>
-                         <Dropdown.Divider />
-                         <Dropdown.Item >
-                           Logout
-                         </Dropdown.Item>
-                       </Dropdown.Menu>
-                     </Dropdown>
+                        <Dropdown>
+
+                          <Dropdown.Toggle variant="" id="dropdown-basic">
+
+                          </Dropdown.Toggle>
+
+                          <Dropdown.Menu>
+                            <Dropdown.Item>
+                              Settings
+                            </Dropdown.Item>
+
+                            <Dropdown.Item>
+                              Change Password
+                            </Dropdown.Item>
+                            <Dropdown.Item href="#/action-2">Activity Log</Dropdown.Item>
+                            <Dropdown.Item href="#/action-3">Messages</Dropdown.Item>
+                            <Dropdown.Divider />
+                            <Dropdown.Item >
+                              Logout
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
                         {/* <a href="#">Profile </a> */}
                       </div>
                     </div>
                   </div>
-
-
                 </div>
               </div>
+
             </div>
           </div>
+
+  
         </div>
+      </div>
 
-
-
-        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
+         {/* Navbar */}
+         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
 
 <a className="navbar-brand" href="#" />
 <button
@@ -204,7 +203,7 @@ function Header() {
 
 <div className="collapse navbar-collapse" id="navbarNav">
 
-  <ul className="navbar-nav ml-auto blockquote" >  
+  <ul className="navbar-nav ml-auto blockquote" >
     <li className="nav-item dropdown rounded category ">
 
 
@@ -262,49 +261,34 @@ function Header() {
   </ul>
 
   <ul className="navbar-nav gap-2 ">
-<li className="nav-item">
-  <a className="nav-link text-dark" onClick={home}>Home</a>
-</li>
-<li className="nav-item">
-  <a className="nav-link text-dark" onClick={shop}>Shop</a>
-</li>
-<li className="nav-item">
-  <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
-</li>
-<li className="nav-item">
-  <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
-</li>
-{/* <li className="nav-item">
-  <a className="nav-link text-dark"onClick={contact} >Contact</a>
+    <li className="nav-item">
+      <a className="nav-link text-dark" onClick={home}>Home</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link text-dark" onClick={shop}>Shop</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
+    </li>
+    <li className="nav-item">
+      <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
+    </li>
+    {/* <li className="nav-item">
+<a className="nav-link text-dark"onClick={contact} >Contact</a>
 </li> */}
 
-</ul>
+  </ul>
 
-<ul className="navbar-nav ms-auto gap-3 Nav3">
-        <li className="nav-item rounded bg-light ">                    
-                Call Support: 0123456789
-        
-        </li>
-    </ul>
- 
+  <ul className="navbar-nav ms-auto gap-3 Nav3">
+    <li className="nav-item rounded bg-light ">
+      Call Support: 0123456789
+
+    </li>
+  </ul>
+
 </div>
 
 </nav>
-
-        
-      </div>
-
-
-
-
-
-
-      {/* Navbar */}
-
-
-
-
-
     </>
   )
 }

@@ -1,21 +1,5 @@
 /* -------------HEADER CSS----------------------- */
 
-/* * {
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-} */
-
-/* body {
-    font-family: 'Rubik', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    background: #FFFFFF;
-    color: #000000;
-    
-} */
 
 ::-webkit-scrollbar {
     display: none;
@@ -81,15 +65,6 @@ p a:hover {
 p a:hover::after {
     opacity: 0.2;
 }
-
-/* ::selection
-{
-	
-} */
-/* p::selection
-{
-	
-} */
 h1 {
     font-size: 48px;
 }
@@ -123,15 +98,7 @@ h6 {
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
-/* h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-} */
+
 .form-control {
     color: #db5246;
 }
@@ -531,10 +498,7 @@ section {
 }
 
 .header_search_form_container {
-    /* width: 100%; */
     width: 400px;
-
-    /* width: calc((100% - 50px) * 0.601); */
     height: 50px;
     border: solid 1px #e5e5e5;
     border-radius: 5px;
@@ -548,7 +512,6 @@ section {
 .header_search_input {
     display: block;
     position: relative;
-    /* width: calc((100% - 50px) * 0.601); */
     width: 400px;
     height: 100%;
     line-height: 50px;
@@ -645,10 +608,7 @@ section {
     cursor: pointer;
 }
 
-/* .custom_dropdown_placeholder i
-{
-	
-} */
+
 .custom_list {
     text-align: left;
     position: absolute;
@@ -706,8 +666,7 @@ select {
     width: auto;
     margin-left: 10px;
     outline: none;
-    /* -webkit-appearance: none;
-	-moz-appearance: none; */
+
     border-bottom: 2px solid #555;
     color: #7b00ff;
     -webkit-transition: all .4s ease-in-out;
@@ -722,8 +681,7 @@ select option {
     border: 0;
     border-bottom: 1px solid #555;
     padding: 10px;
-    /* -webkit-appearance: none;
-	-moz-appearance: none; */
+
 }
 
 .header_search_button {
@@ -928,8 +886,6 @@ select option {
     position: absolute;
     top: 100%;
     left: 0;
-    /*visibility: hidden;
-	opacity: 0;*/
     min-width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
@@ -1065,7 +1021,7 @@ select option {
 *********************************/
 
 .page_menu {
-    /* margin-top: 15px; */
+
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
@@ -1101,7 +1057,7 @@ select option {
     display: block;
     position: relative;
     border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-    /* vertical-align: middle; */
+
 }
 
 .page_menu_item>a {
@@ -1474,7 +1430,9 @@ select option {
 
 
 
-/* -------------NAVBAR CSS----------------------- */
+
+
+/* ------------------------------------------------------NAVBAR CSS--------------------------------------------------- */
 
 
 
@@ -1489,8 +1447,7 @@ select option {
 
 .category {
     width: 250px;
-    /* text-align: right;
-    justify-content: right */
+
 }
 
 .categories_title::before {
@@ -1522,16 +1479,14 @@ li {
     padding-right: 10px;
 }
 
-.navFull {
-    border: 1px solid #6c757d;
-}
+
 
 
 #box11 {
     margin: 0;
     padding: 0;
     border-right: 1px solid 6c757d;
-    /* border: 1px solid #6c757d; */
+ 
 }
 
 .navbox {
@@ -1562,6 +1517,19 @@ li {
     padding-right: 0px !important; 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -------------HOME CSS----------------------- */
 
 #carouselExampleFade {
@@ -1570,50 +1538,9 @@ li {
     font-weight: 400;
     background: #FFFFFF;
     color: #000000;
-    /* overflow: hidden;  */
+
 }
 
-/* -------------HOME2 CSS----------------------- */
-
-/* 
-a{
-	color: #75b61ac2;
-}
-a:hover{
-	color: #75B61A;
-	text-decoration: none;
-}*/
-
-
-/*
-img{
-	width: 100%;
-}
-header#header{
-	background: #fff;
-	border-bottom: 2px solid #75B61A;
-}
-.my-menu{
-	float: right !important;
-}
-.my-navbar li a{
-	font-weight: bold;
-}
-.mbl-btn i{
-	color: #75B61A;
-}
-.shopping-bag i {
-    font-size: 30px;
-    color: #75B61A;
-}
-
-
-.head-text {
-    text-align: left;
-}
-
-/* img.head-img img {
-} */
 
 img.head-img {
     width: 500px;
@@ -1729,34 +1656,26 @@ button .my-btn {
 /* -------------BLOGS CSS----------------------- */
 
 
-
-
-
-
 /* -------------CARDS CSS----------------------- */
 
 
 /* -------------CONTACT CSS----------------------- */
 
 
-
 /* -------------GROCERS CSS----------------------- */
 
 #GrocerCenter {
-    /* float: right;  */
-    /* font-family: 'Poppins', sans-serif; */
+ 
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2;
-     /* display: flex; */
-    /* flex-direction: column;  */
-    /* min-height: 100vh;  */
+   
 }
 
 
 
 .GrocerHeading {
-    /* margin-top: 50px; */
+    
     position: relative;
     padding: 0;
     margin: 0;
@@ -1943,272 +1862,13 @@ button .my-btn {
 }
 
 
-/* -------------LOGINS CSS----------------------- */
+/* -----------------------------------------------LOGINS CSS----------------------------------------------------------- */
 
-/* -------------SHOP CSS----------------------- */
+/* ------------------------------------------------SHOP CSS------------------------------------------------------------- */
 
+/* -----------------------------------------------FOOTER CSS--------------------------------------------------------- */
 
-
-
-
-
-
-
-/* -------------FOOTER CSS----------------------- */
-
-
-.FooterContact {
-    list-style: none;
-}
-
-.inptFld {
-    overflow: hidden;
-    border: #000;
-}
-
-.section-title {
-    position: relative;
-    font-size: 30px;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    margin: 0 0 45px;
-    text-align: center;
-}
-
-.sec-pad {
-    padding: 0px 0 0;
-    margin: 0px 0;
-    margin-bottom: 0;
-}
-
-.contact-sec {
-    /* align-item: center; */
-    display: flex;
-    background-color: #f2f2f2;
-}
-
-.contact-sec .contact-ul li,
-.contact-ul b {
-    font-size: 20px;
-    margin: 10px 0;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    word-wrap: break-word;
-}
-
-.contact-sec .contact-ul i {
-    font-size: 18px;
-    padding: 10px;
-    margin-right: 10px;
-    border-radius: 50%;
-}
-
-.contact-detail a {
-    color: #000;
-    text-decoration: none;
-}
-
-.contact-sec .contact-ul li b:hover {
-    color: #f93;
-}
-
-.contact-sec .contact-ul li .fa-location-dot {
-    color: #f44337;
-    border: 2px solid #f4433790;
-}
-
-.contact-sec .contact-ul li .fa-phone {
-    color: #00b055;
-    border: 2px solid #00b05590;
-}
-
-.contact-sec .contact-ul li .fa-envelope {
-    color: #ff6347;
-    border: 2px solid #ff634790;
-}
-
-.contact-detail span {
-    width: 400px;
-    display: flex;
-    justify-content: center;
-}
-
-.contact-detail span a {
-    font-size: 20px;
-    padding: 6px 12px;
-    color: #000;
-    border-radius: 50%;
-    margin: 0px 5px;
-}
-
-.contact-detail span .fb {
-    color: #3b5998;
-    border: 3px solid #3b5998;
-}
-
-.contact-detail span .fb:hover {
-    color: #fff;
-    background-color: #3b5998;
-}
-
-.contact-detail span .insta {
-    color: #833ab4;
-    border: 3px solid #833ab4;
-}
-
-.contact-detail span .insta:hover {
-    color: #fff;
-    background-color: #833ab4;
-}
-
-.contact-detail span .twitter {
-    color: #00acee;
-    border: 3px solid #00acee;
-}
-
-.contact-detail span .twitter:hover {
-    color: #fff;
-    background-color: #00acee;
-}
-
-form.contFrm {
-    max-width: 396px;
-    margin: auto;
-}
-
-.inptFld {
-    width: 100%;
-    height: 50px;
-    border: 0;
-    margin: 0 0 10px;
-    border-radius: 8px;
-    padding: 0 20px;
-    font-size: 16px;
-    color: #000;
-}
-
-.inptFld:focus {
-    outline-offset: -4px;
-    outline: 1px solid rgb(252, 252, 252)
-}
-
-.contFrm textarea {
-    height: 75px;
-    padding-top: 5px;
-}
-
-.inptBtn {
-    height: 50px;
-    border: 0;
-    background: #00b055;
-    font-size: 14px;
-    color: #fff;
-    margin: auto;
-    letter-spacing: 1px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 200px;
-}
-
-/* Responcive css Start */
-
-@media (max-width: 991px) {
-    .sec-pad {
-        padding: 20px 0 0px;
-    }
-
-    .contact-sec .contact-ul li,
-    .contact-ul b {
-        font-size: 18px;
-    }
-
-    .contact-sec .contact-ul i {
-        font-size: 14px;
-        padding: 6px;
-        margin-right: 6px;
-    }
-
-    .inptFld {
-        height: 40px;
-        margin: 0 0 10px;
-        padding: 0 14px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 767px) {
-    .contact-detail span {
-        width: auto;
-    }
-
-    .contact-detail span a {
-        font-size: 18px;
-        padding: 5px 10px;
-        color: #000;
-        border-radius: 50%;
-        margin: 0px 5px 20px;
-    }
-}
-
-@media (max-width: 575px) {
-    .section-title {
-        font-size: 26px;
-        font-weight: 500;
-    }
-
-    .contact-sec {
-        border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
-    }
-
-    .contact-sec .contact-ul i {
-        border: none;
-    }
-
-    .inptFld {
-        height: 36px;
-        margin: 0 0 8px;
-        padding: 0 14px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .contact-sec .contact-ul li,
-    .contact-ul b {
-        font-size: 16px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------HOME---------------------------------------------------- */
+/* ---------------------------------------------------HOME---------------------------------------------------- */
 
 #summer-collection {
 	width: 100%;
@@ -2428,7 +2088,7 @@ form.contFrm {
 	width: 100%;
 	display: block;
 	margin: 6rem 0rem;
-	/*  background-color:  #f5f2f1;*/
+	
 	padding: 1.4rem 0rem;
 }
 
@@ -2445,7 +2105,7 @@ form.contFrm {
 	-ms-flex: 1;
 	flex: 1;
 	padding: 3rem 0rem 0rem 1rem;
-	/*  background-color:  #f5f2f1;*/
+	
 }
 
 #collections .container .c-1 .c-1-image-holder {
@@ -2474,7 +2134,7 @@ form.contFrm {
 	-ms-flex: 1;
 	flex: 1;
 	padding: 1rem;
-	/*  background-color:  #f5f2f1;*/
+	
 }
 
 #collections .container .c-2 h2 {
@@ -2900,7 +2560,7 @@ form.contFrm {
 	font-family: Cambria;
 	color: #ffffff;
 	font-size: 0.875rem;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: 0.044rem;
 	text-align: center;
 	padding: 0.2rem 0rem;
@@ -2916,7 +2576,7 @@ form.contFrm {
 
 #contact .container p.email span {
 	width: 17px;
-	height: 15px;
+	height: 10px;
 	float: right;
 }
 
