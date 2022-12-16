@@ -1,9 +1,31 @@
 {
+  "name": "new_structure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.1",
+    "aws-sdk": "^2.1087.0",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mysql2": "^2.3.3",
-    "sequelize": "^6.25.8"
+    "crypto-js": "^4.1.1",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.6",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
   }
 }
