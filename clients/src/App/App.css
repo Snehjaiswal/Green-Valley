@@ -2563,7 +2563,7 @@ button .my-btn {
 	letter-spacing: 0.056rem;
 	text-align: center;
 	text-transform: uppercase;
-	padding-top: 3rem;
+	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
 
@@ -2785,7 +2785,7 @@ footer .copy-right {
   .main hr {
     border-top: 2px dotted #ccc;
     width: 80%;
-    margin-top: -10px;
+    margin-top: -18px;
   }
   .main .icons {
     display: flex;
