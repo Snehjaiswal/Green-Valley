@@ -1,4 +1,6 @@
 import React from 'react'
+import img7 from '../images/7.jpg'
+import img8 from '../images/8.jpg'
 
 function Blogs() {
   return (
@@ -10,10 +12,9 @@ function Blogs() {
               <h2>latest from blog</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
-            <div className="row blog-content">
-
-              <div className="col-sm-6 blog-1">
-                <div className="blog-1-image-holder"> <img src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412548/E-commerce%20landing%20page/blog/blog-2-img_3x.jpg" alt="image" /> </div>
+            <div className="blog-content">
+              <div className="blog-1">
+                <div className="blog-1-image-holder"> <img src={img7} alt="image" /> </div>
                 <div className="blog-1-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>
@@ -21,9 +22,8 @@ function Blogs() {
                   <p className="button">view post</p>
                 </div>
               </div>
-
-              <div className="col-sm-6 blog-2">
-                <div className="blog-2-image-holder"> <img src="https://res.cloudinary.com/de8cuyd0n/image/upload/v1520412543/E-commerce%20landing%20page/blog/blog-1-img_3x.jpg" alt="image" /> </div>
+              <div className="blog-2">
+                <div className="blog-2-image-holder"> <img src={img8} alt="image" /> </div>
                 <div className="blog-2-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>
@@ -31,10 +31,6 @@ function Blogs() {
                   <p className="button">view post</p>
                 </div>
               </div>
-
-              
-              
-              
             </div>
           </div>
         </section>

@@ -106,7 +106,7 @@ function Footer() {
       </div>
     </div>
     <div style={{ textAlign: "center", marginTop: 20 }}>
-      <p> Copyright © All rights reserved | Ajeet</p>
+      <p> Copyright © All rights reserved | Sneh & Anmol</p>
     </div>
   </div>
 </section>

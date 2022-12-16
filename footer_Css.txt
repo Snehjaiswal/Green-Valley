@@ -1,0 +1,229 @@
+
+.FooterContact {
+    list-style: none;
+}
+
+.inptFld {
+    overflow: hidden;
+    border: #000;
+}
+
+.section-title {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 45px;
+    text-align: center;
+}
+
+.sec-pad {
+    padding: 0px 0 0;
+    margin: 0px 0;
+    margin-bottom: 0;
+}
+
+.contact-sec {
+    /* align-item: center; */
+    display: flex;
+    background-color: #f2f2f2;
+}
+
+.contact-sec .contact-ul li,
+.contact-ul b {
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    word-wrap: break-word;
+}
+
+.contact-sec .contact-ul i {
+    font-size: 18px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.contact-detail a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+    color: #f93;
+}
+
+.contact-sec .contact-ul li .fa-location-dot {
+    color: #f44337;
+    border: 2px solid #f4433790;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+    color: #00b055;
+    border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+    color: #ff6347;
+    border: 2px solid #ff634790;
+}
+
+.contact-detail span {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-detail span a {
+    font-size: 20px;
+    padding: 6px 12px;
+    color: #000;
+    border-radius: 50%;
+    margin: 0px 5px;
+}
+
+.contact-detail span .fb {
+    color: #3b5998;
+    border: 3px solid #3b5998;
+}
+
+.contact-detail span .fb:hover {
+    color: #fff;
+    background-color: #3b5998;
+}
+
+.contact-detail span .insta {
+    color: #833ab4;
+    border: 3px solid #833ab4;
+}
+
+.contact-detail span .insta:hover {
+    color: #fff;
+    background-color: #833ab4;
+}
+
+.contact-detail span .twitter {
+    color: #00acee;
+    border: 3px solid #00acee;
+}
+
+.contact-detail span .twitter:hover {
+    color: #fff;
+    background-color: #00acee;
+}
+
+form.contFrm {
+    max-width: 396px;
+    margin: auto;
+}
+
+.inptFld {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    margin: 0 0 10px;
+    border-radius: 8px;
+    padding: 0 20px;
+    font-size: 16px;
+    color: #000;
+}
+
+.inptFld:focus {
+    outline-offset: -4px;
+    outline: 1px solid rgb(252, 252, 252)
+}
+
+.contFrm textarea {
+    height: 75px;
+    padding-top: 5px;
+}
+
+.inptBtn {
+    height: 50px;
+    border: 0;
+    background: #00b055;
+    font-size: 14px;
+    color: #fff;
+    margin: auto;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Responcive css Start */
+
+@media (max-width: 991px) {
+    .sec-pad {
+        padding: 20px 0 0px;
+    }
+
+    .contact-sec .contact-ul li,
+    .contact-ul b {
+        font-size: 18px;
+    }
+
+    .contact-sec .contact-ul i {
+        font-size: 14px;
+        padding: 6px;
+        margin-right: 6px;
+    }
+
+    .inptFld {
+        height: 40px;
+        margin: 0 0 10px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-detail span {
+        width: auto;
+    }
+
+    .contact-detail span a {
+        font-size: 18px;
+        padding: 5px 10px;
+        color: #000;
+        border-radius: 50%;
+        margin: 0px 5px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-title {
+        font-size: 26px;
+        font-weight: 500;
+    }
+
+    .contact-sec {
+        border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
+    }
+
+    .contact-sec .contact-ul i {
+        border: none;
+    }
+
+    .inptFld {
+        height: 36px;
+        margin: 0 0 8px;
+        padding: 0 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-sec .contact-ul li,
+    .contact-ul b {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+ */

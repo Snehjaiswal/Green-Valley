@@ -13,6 +13,7 @@ import img8 from '../images/8.jpg'
 import img9 from '../images/9.jpg'
 import img10 from '../images/10.jpg'
 import img11 from '../images/11.jpg'
+import Blogs from '../Blogs/Blogs';
 
 
 function Home3() {
@@ -116,7 +117,7 @@ function Home3() {
             </div>
           </div>
         </section>
-        <section id="blog">
+        {/* <section id="blog">
           <div className="container">
             <div className="blog-header">
               <h2>latest from blog</h2>
@@ -143,8 +144,8 @@ function Home3() {
               </div>
             </div>
           </div>
-        </section>
-
+        </section> */}
+<Blogs/>
       </div>
 
 
