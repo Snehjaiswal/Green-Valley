@@ -2165,7 +2165,7 @@ button .my-btn {
 	border: 0;
 	border-top: 0.1rem solid #a61458;
 	padding: 0;
-	margin-bottom: 4rem;
+	margin-bottom: 1rem;
 }
 
 #collections .container .c-2 p.button {
@@ -2654,3 +2654,196 @@ footer .copy-right {
 	background-color: rgba(255, 255, 255, 0.4);
 	opacity: 1;
 }
+
+
+
+
+
+/* -----------------------------------Login Registration--------------------------------------- */
+.main {
+    border: 1px solid black;
+    width: 500px;
+    margin: 32px auto;
+    padding: 15px 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .main h1 {
+    text-align: center;
+  }
+  .main .un,
+  .main .em,
+  .main .orp,
+  .main .confp {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  .un::before {
+    content: "\f007";
+  }
+  .em::before {
+    content: "\f2b6";
+  }
+  .orp::before,
+  .confp::before {
+    content: "\f023";
+  }
+  .main .un::before,
+  .main .em::before,
+  .main .orp::before,
+  .main .confp::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    font-size: 13px;
+    left: 30px;
+    top: 11px;
+    z-index: 1;
+    color: #777;
+  }
+  .main div input {
+    width: 85%;
+    padding: 10px 10px 10px 30px;
+    position: relative;
+    font-weight: bold;
+    caret-color: var(--mainBlue);
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+  }
+  .main div input:focus {
+    border-bottom: 2px solid var(--mainBlue);
+  }
+  .main button {
+    width: 85%;
+    padding: 10px;
+    background-color: var(--mainBlue);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: 0.35s ease-in-out;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -ms-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+  }
+  .main button::before,
+  .main button::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+  }
+  .main button:before {
+    top: -5px;
+    left: 0;
+    background-color: inherit;
+    transition: 0.35s ease-in-out;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -ms-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+  }
+  .main button:after {
+    bottom: -5px;
+    right: 0;
+    background-color: inherit;
+    transition: 0.35s ease-in-out;
+    -webkit-transition: 0.35s ease-in-out;
+    -moz-transition: 0.35s ease-in-out;
+    -ms-transition: 0.35s ease-in-out;
+    -o-transition: 0.35s ease-in-out;
+  }
+  .main button {
+    width: 90%;
+    background-color: #007ac1;
+  }
+  .main button:hover::before,
+  .main button:hover::after {
+    width: 100%;
+  }
+  .main h5 a {
+    color: #2196f3;
+    text-decoration: none;
+  }
+  .main hr {
+    border-top: 2px dotted #ccc;
+    width: 80%;
+    margin-top: -10px;
+  }
+  .main .icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 35px;
+  }
+  .main .icons .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+  }
+  .main .icons .icon-container:first-child:hover {
+    background-color: #3b5998;
+  }
+  .main .icons .icon-container:nth-child(2):hover {
+    background-color: #5da9dd;
+  }
+  .main .icons .icon-container:last-child:hover {
+    background-color: #1b1f23;
+  }
+  .main .icons .icon-container .fab {
+    font-size: 20px;
+    transition: 0.25s ease-in-out;
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+  }
+  .main .icons .icon-container .fa-facebook-f {
+    color: #3b5998;
+  }
+  .main .icons .icon-container .fa-twitter {
+    color: #5da9dd;
+  }
+  .main .icons .icon-container .fa-github {
+    color: #1b1f23;
+  }
+  .main .icons .icon-container:hover .fab {
+    color: #fff;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+  

@@ -19,7 +19,7 @@ function Header() {
 
 
   const navigate = useNavigate();
-
+const roleid = localStorage.getItem('roleid')
 
   const home = () => {
     navigate('/home');
@@ -42,7 +42,11 @@ function Header() {
 
   }
   const profilePage = () => {
-    navigate('/profilePage');
+    if(roleid){
+      navigate('/profilePage');
+    }else{
+      navigate('/registration');
+    }
   }
 
 

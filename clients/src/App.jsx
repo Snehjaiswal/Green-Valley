@@ -12,6 +12,9 @@ import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
 import Grocerhome from './App/Grocers/Grocerhome'
 import Profiepage from "./App/Profile-Page/Profiepage";
+import Registration from "./App/Logins/Registration";
+import Login from "./App/Logins/Login";
+
 function App() {
   return (
     <>
@@ -30,6 +33,9 @@ function App() {
           <Route path="/grocer" element={<Grocer/>}/>
           <Route path="/grocerhome" element={<Grocerhome/>}/>
           <Route path="/profilePage" element={<Profiepage/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/registration" element={<Registration/>}/>
+
           
 
 
