@@ -41,8 +41,12 @@ function Header() {
     navigate('/contact');
 
   }
+  const profilePage = () => {
+    navigate('/profilePage');
+  }
 
 
+  // Local Storeage 
   const count = localStorage.getItem('count')
   const prize = localStorage.getItem('prize')
 
@@ -140,40 +144,20 @@ function Header() {
               <div className="col-lg-2 col-9 order-lg-4 order-2 text-lg-left text-right">
                 <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
                   <div className="wishlist d-flex flex-row align-items-center justify-content-end">
-                    <div className="wishlist_icon">
+                    <div className="wishlist_icon" onClick={profilePage}>
                       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                       </svg>
+                      PROFILE
                     </div>
 
-                    <div className="profile_content">
-                      <div className="profile_text">
-                        <Dropdown>
-
-                          <Dropdown.Toggle variant="" id="dropdown-basic">
-
-                          </Dropdown.Toggle>
-
-                          <Dropdown.Menu>
-                            <Dropdown.Item>
-                              Settings
-                            </Dropdown.Item>
-
-                            <Dropdown.Item>
-                              Change Password
-                            </Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Activity Log</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Messages</Dropdown.Item>
-                            <Dropdown.Divider />
-                            <Dropdown.Item >
-                              Logout
-                            </Dropdown.Item>
-                          </Dropdown.Menu>
-                        </Dropdown>
-                        {/* <a href="#">Profile </a> */}
+                    {/* <div className="profile_content">
+                      <div className="profile_text" onClick={profilePage}>
+                        PROFILE
+                    
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -181,114 +165,114 @@ function Header() {
             </div>
           </div>
 
-  
+
         </div>
       </div>
 
-         {/* Navbar */}
-         <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
 
-<a className="navbar-brand" href="#" />
-<button
-  className="navbar-toggler"
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarNav"
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <span className="navbar-toggler-icon" />
-</button>
+        <a className="navbar-brand" href="#" />
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" />
+        </button>
 
-<div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse" id="navbarNav">
 
-  <ul className="navbar-nav ml-auto blockquote" >
-    <li className="nav-item dropdown rounded category ">
+          <ul className="navbar-nav ml-auto " >
+            <li className="nav-item dropdown rounded category" id='blockquote'>
 
 
-      <a
-        className="nav-link dropdown-toggle text-dark"
-        href="#"
-        id="navbarDropdown"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        style={{ textAlign: 'right' }}
-      >
+              <a
+                className="nav-link dropdown-toggle text-dark"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{ textAlign: 'center' }}
+              >
 
-        CATEGORY
-      </a>
+                CATEGORY
+              </a>
 
-      <ul
-        className="dropdown-menu dropdown-menu-center"
-        aria-labelledby="navbarDropdown"
-      >
-        <li>
-          <a className="dropdown-item" href="#">
-            Account
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>
-        <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>    <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>    <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>    <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>    <li>
-          <a className="dropdown-item" href="#">
-            Another action
-          </a>
-        </li>
+              <ul
+                className="dropdown-menu dropdown-menu-center"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Account
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>    <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>    <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>    <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>    <li>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
 
-      </ul>
-    </li>
-  </ul>
+              </ul>
+            </li>
+          </ul>
 
-  <ul className="navbar-nav gap-2 ">
-    <li className="nav-item">
-      <a className="nav-link text-dark" onClick={home}>Home</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link text-dark" onClick={shop}>Shop</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
-    </li>
-    <li className="nav-item">
-      <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
-    </li>
-    {/* <li className="nav-item">
-<a className="nav-link text-dark"onClick={contact} >Contact</a>
-</li> */}
+          <ul className="navbar-nav gap-2 ">
+            <li className="nav-item">
+              <a className="nav-link text-dark" onClick={home}>Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" onClick={shop}>Shop</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link text-dark" onClick={contact} >Contact</a>
+            </li>
 
-  </ul>
+          </ul>
 
-  <ul className="navbar-nav ms-auto gap-3 Nav3">
-    <li className="nav-item rounded bg-light ">
-      Call Support: 0123456789
+          <ul className="navbar-nav ms-auto gap-3 Nav3">
+            <li className="nav-item rounded bg-light ">
+              Call Support: 0123456789
 
-    </li>
-  </ul>
+            </li>
+          </ul>
 
-</div>
+        </div>
 
-</nav>
+      </nav>
     </>
   )
 }

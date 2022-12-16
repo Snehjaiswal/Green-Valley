@@ -1434,7 +1434,12 @@ select option {
 
 /* ------------------------------------------------------NAVBAR CSS--------------------------------------------------- */
 
-
+/* #navbarDropdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+} */
 
 .navbar-nav .nav-item:hover {
     background-color: rgba(180, 190, 203, 0.4);
@@ -1447,6 +1452,12 @@ select option {
 
 .category {
     width: 250px;
+
+}
+
+#blockquote{
+    padding-left: 0;
+    margin-left: 0 !important;
 
 }
 
@@ -1494,7 +1505,7 @@ li {
 }
 
 .Nav3 {
-    padding-right: 20px;
+    padding-right: 50px;
 }
 
 .Home11 {

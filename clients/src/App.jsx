@@ -11,6 +11,7 @@ import Blogs from "./App/Blogs/Blogs";
 import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
 import Grocerhome from './App/Grocers/Grocerhome'
+import Profiepage from "./App/Profile-Page/Profiepage";
 function App() {
   return (
     <>
@@ -21,15 +22,19 @@ function App() {
         <Route path='/cart' element={<CartProvider>   
           <Cart />
           </CartProvider>}></Route>
+
           <Route path="/home" element={<Home/>}/> 
           <Route path="/shop" element={<App1/>}/>
           <Route path="/blog" element={<Blogs/>}/>
-          {/* <Route path="/contact" element={<Contact/>}/> */}
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="/grocer" element={<Grocer/>}/>
           <Route path="/grocerhome" element={<Grocerhome/>}/>
+          <Route path="/profilePage" element={<Profiepage/>}/>
+          
+
 
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
 
     </>
   );
