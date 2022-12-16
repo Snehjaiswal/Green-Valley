@@ -32,6 +32,9 @@ function Home() {
   data-bs-ride="carousel"
 >
   <div className="carousel-inner">
+  <div className="carousel-item">
+      <img src={img4} className="img-fluid" alt="..." />
+    </div>
     <div className="carousel-item active">
       <img src={img1} className="img-fluid" alt="..." />
     </div>
@@ -41,9 +44,7 @@ function Home() {
     <div className="carousel-item">
       <img src={img3} className="img-fluid" alt="..." />
     </div>
-    <div className="carousel-item">
-      <img src={img4} className="img-fluid" alt="..." />
-    </div>
+    
     <div className="carousel-item">
       <img src={img5} className="img-fluid" alt="..." />
     </div>
