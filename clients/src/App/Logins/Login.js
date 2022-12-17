@@ -5,7 +5,7 @@ function Login() {
   const navigate = useNavigate();
 
   const [email, setemail] = useState("");
-console.log("email",email);
+// console.log("email",email);
 
 
   const Registration = () => {

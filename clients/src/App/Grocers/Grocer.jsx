@@ -22,6 +22,16 @@ function Grocer() {
     {
       id: 2,
       imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mpEAFXv-iIa50q5rA2L6nnHGy_akXDFyQQ&usqp=CAU",
+      name: "Anmol Pagal",
+      username: "@Goli",
+      work: " I'm a Full Stack Developer.",
+      views: "15K",
+      project: "82",
+      Followers: "1 M"
+    },
+    {
+      id: 3,
+      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0mpEAFXv-iIa50q5rA2L6nnHGy_akXDFyQQ&usqp=CAU",
       name: "Yogita Tomar",
       username: "@yogita",
       work: " I'm a Full Stack Developer.",

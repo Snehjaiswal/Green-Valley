@@ -20,6 +20,7 @@ function Header() {
 
   const navigate = useNavigate();
   const roleid = localStorage.getItem('roleid')
+console.log(roleid);
 
   const home = () => {
     navigate('/home');
@@ -42,11 +43,12 @@ function Header() {
 
   }
   const profilePage = () => {
-    if (roleid === 1) {
+    if (roleid == 1) {
       navigate('/userprofile');
-    } else if (roleid === 2) {
+    } else if (roleid == 2) {
+      console.log("dsbcudv");
       navigate('/sellerProfile');
-    } else if (roleid === 3) {
+    } else if (roleid == 3) {
       navigate('/adminprofile');
     } else {
       navigate('/login');
@@ -73,7 +75,7 @@ function Header() {
               <div className="col-lg-2 col-sm-3 col-3 order-1">
                 <div className="logo_container">
                   <div className="logo">
-                    <a href='okk' >GreenValley</a>
+                    <a  >GreenValley</a>
                   </div>
                 </div>
               </div>
@@ -117,7 +119,7 @@ function Header() {
                     </div>
                     <div className="wishlist_content">
                       <div className="wishlist_text">
-                        <a href='okk' >Wishlist</a>
+                        <a  >Wishlist</a>
                       </div>
                       <div className="wishlist_count">10</div>
                     </div>
@@ -137,7 +139,7 @@ function Header() {
                         </div>
                         <div className="cart_content">
                           <div className="cart_text">
-                            <a href='okk' >Cart</a>
+                            <a  >Cart</a>
                           </div>
                           <div className="cart_price">RS. {cartTotal}</div>
                         </div>
@@ -199,7 +201,7 @@ function Header() {
             <li className="nav-item dropdown rounded category" id='blockquote'>
 
 
-              <a href='okk'
+              <a 
                 className="nav-link dropdown-toggle text-dark"
                 
                 id="navbarDropdown"
@@ -217,33 +219,33 @@ function Header() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Account
                   </a>
                 </li>
                 <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>
                 <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a href='okk' className="dropdown-item" >
+                  <a  className="dropdown-item" >
                     Another action
                   </a>
                 </li>
@@ -254,19 +256,19 @@ function Header() {
 
           <ul className="navbar-nav gap-2 ">
             <li className="nav-item">
-              <a href='okk' className="nav-link text-dark" onClick={home}>Home</a>
+              <a  className="nav-link text-dark" onClick={home}>Home</a>
             </li>
             <li className="nav-item">
-              <a href='okk' className="nav-link text-dark" onClick={shop}>Shop</a>
+              <a  className="nav-link text-dark" onClick={shop}>Shop</a>
             </li>
             <li className="nav-item">
-              <a href='okk' className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
+              <a  className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
             </li>
             <li className="nav-item">
-              <a href='okk' className="nav-link text-dark" onClick={blogs}>Blogs</a>
+              <a  className="nav-link text-dark" onClick={blogs}>Blogs</a>
             </li>
             <li className="nav-item">
-              <a href='okk' className="nav-link text-dark" onClick={contact} >Contact</a>
+              <a  className="nav-link text-dark" onClick={contact} >Contact</a>
             </li>
 
           </ul>
