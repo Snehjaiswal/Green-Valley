@@ -2848,4 +2848,12 @@ footer .copy-right {
   }
   
 
+  .header-profile{
+    display: flex;
+    align-items: center;
+  }
+  .header-profile a{
+    padding: 15px;
+  }
+
   /* --------------------------------------------------------SIDE TOGGLE MODAL HEADER-------------------------------------------------------------- */
