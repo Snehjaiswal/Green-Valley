@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from "react-use-cart";
-import { Dropdown } from "react-bootstrap";
+// import { Dropdown } from "react-bootstrap";
 
 
 
 function Header() {
   const {
-    isEmpty,
-    totalUniqueItems,
-    items,
-    totalItems,
+    // isEmpty,
+    // totalUniqueItems,
+    // items,
+    // totalItems,
     cartTotal,
-    updateItemQuantity,
-    removeItem,
-    emptyCart
+    // updateItemQuantity,
+    // removeItem,
+    // emptyCart
   } = useCart();
 
 
@@ -42,11 +42,11 @@ function Header() {
 
   }
   const profilePage = () => {
-    if (roleid == 1) {
+    if (roleid === 1) {
       navigate('/userprofile');
-    } else if (roleid == 2) {
+    } else if (roleid === 2) {
       navigate('/sellerProfile');
-    } else if (roleid == 3) {
+    } else if (roleid === 3) {
       navigate('/adminprofile');
     } else {
       navigate('/login');
@@ -56,7 +56,7 @@ function Header() {
 
   // Local Storeage 
   const count = localStorage.getItem('count')
-  const prize = localStorage.getItem('prize')
+  // const prize = localStorage.getItem('prize')
 
 
 
@@ -73,7 +73,7 @@ function Header() {
               <div className="col-lg-2 col-sm-3 col-3 order-1">
                 <div className="logo_container">
                   <div className="logo">
-                    <a href="#">GreenValley</a>
+                    <a href='okk' >GreenValley</a>
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ function Header() {
                     </div>
                     <div className="wishlist_content">
                       <div className="wishlist_text">
-                        <a href="#">Wishlist</a>
+                        <a href='okk' >Wishlist</a>
                       </div>
                       <div className="wishlist_count">10</div>
                     </div>
@@ -137,7 +137,7 @@ function Header() {
                         </div>
                         <div className="cart_content">
                           <div className="cart_text">
-                            <a href="#">Cart</a>
+                            <a href='okk' >Cart</a>
                           </div>
                           <div className="cart_price">RS. {cartTotal}</div>
                         </div>
@@ -180,7 +180,7 @@ function Header() {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top navFull">
 
-        <a className="navbar-brand" href="#" />
+        {/* <a href='okkok' className="navbar-brand" /> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -199,9 +199,9 @@ function Header() {
             <li className="nav-item dropdown rounded category" id='blockquote'>
 
 
-              <a
+              <a href='okk'
                 className="nav-link dropdown-toggle text-dark"
-                href="#"
+                
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -217,33 +217,33 @@ function Header() {
                 aria-labelledby="navbarDropdown"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Account
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>    <li>
-                  <a className="dropdown-item" href="#">
+                  <a href='okk' className="dropdown-item" >
                     Another action
                   </a>
                 </li>
@@ -254,19 +254,19 @@ function Header() {
 
           <ul className="navbar-nav gap-2 ">
             <li className="nav-item">
-              <a className="nav-link text-dark" onClick={home}>Home</a>
+              <a href='okk' className="nav-link text-dark" onClick={home}>Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" onClick={shop}>Shop</a>
+              <a href='okk' className="nav-link text-dark" onClick={shop}>Shop</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
+              <a href='okk' className="nav-link text-dark" onClick={grocer}>Green Grocer</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
+              <a href='okk' className="nav-link text-dark" onClick={blogs}>Blogs</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-dark" onClick={contact} >Contact</a>
+              <a href='okk' className="nav-link text-dark" onClick={contact} >Contact</a>
             </li>
 
           </ul>

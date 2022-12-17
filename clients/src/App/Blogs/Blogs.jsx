@@ -14,7 +14,7 @@ function Blogs() {
             </div>
             <div className="blog-content">
               <div className="blog-1">
-                <div className="blog-1-image-holder"> <img src={img7} alt="image" /> </div>
+                <div className="blog-1-image-holder"> <img src={img7} alt="okk"/> </div>
                 <div className="blog-1-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>
@@ -23,7 +23,7 @@ function Blogs() {
                 </div>
               </div>
               <div className="blog-2">
-                <div className="blog-2-image-holder"> <img src={img8} alt="image" /> </div>
+                <div className="blog-2-image-holder"> <img src={img8} alt="okk" /> </div>
                 <div className="blog-2-content">
                   <h4>Lorem Ipsum</h4>
                   <h3>Lorem ipsum dolor sit amet.</h3>

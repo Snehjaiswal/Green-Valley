@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
@@ -28,24 +28,24 @@ console.log("email",email);
         </div>
 
         <button type="submit">Login</button>
-        <h5>Don't Have an Account? <a onClick={Registration}> Log In Here</a></h5>
+        <h5>Don't Have an Account? <a href='-' onClick={Registration}> Log In Here</a></h5>
         <hr />
         <h4>Login With</h4>
         <div class="icons">
           <div class="icon-container">
-            <a>
+            <a href='-'>
               <i class="fab fa-google"></i>
             </a>
           </div>
 
           <div class="icon-container">
-            <a>
+            <a href='-'>
               <i class="fab fa-facebook-f"></i>
             </a>
           </div>
 
           <div class="icon-container">
-            <a >
+            <a href='-'>
               <i class="fab fa-github"></i>
             </a>
           </div>

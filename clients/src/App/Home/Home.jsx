@@ -5,10 +5,10 @@ import Home3 from './Home3'
 
 
 // Images All
-import Spinach from '../images/Spinach.jpg'
-import Garlic from '../images/Garlic.jpg'
-import Carrots from '../images/Carrots.jpg'
-import Broccoli from '../images/Broccoli.jpg'
+// import Spinach from '../images/Spinach.jpg'
+// import Garlic from '../images/Garlic.jpg'
+// import Carrots from '../images/Carrots.jpg'
+// import Broccoli from '../images/Broccoli.jpg'
 import img1 from '../images/1.jpg'
 import img2 from '../images/2.jpg'
 import img3 from '../images/3.jpg'
@@ -18,8 +18,8 @@ import img6 from '../images/6.jpg'
 import img7 from '../images/7.jpg'
 import img8 from '../images/8.jpg'
 import img9 from '../images/9.jpg'
-import img10 from '../images/10.jpg'
-import img11 from '../images/11.jpg'
+// import img10 from '../images/10.jpg'
+// import img11 from '../images/11.jpg'
 
 
 function Home() {

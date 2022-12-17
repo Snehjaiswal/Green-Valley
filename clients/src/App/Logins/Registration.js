@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Registration() {
     const navigate = useNavigate();
@@ -29,22 +29,22 @@ function Registration() {
                     <input type="password" placeholder="Confirm Password *" required />
                 </div>
                 <button type="submit">Sign Up</button>
-                <h5>Have an Account? <a onClick={login}> Log In Here</a></h5>
+                <h5>Have an Account? <a href='-' onClick={login}> Log In Here</a></h5>
                 <hr />
                 <h4>Or Register With</h4>
                 <div class="icons">
                     <div class="icon-container">
-                        <a href="https://elzero.org/" target="_blank">
+                        <a href="https://elzero.org/" >
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
                     <div class="icon-container">
-                        <a href="https://elzero.org/" target="_blank">
+                        <a href="https://elzero.org/" >
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
                     <div class="icon-container">
-                        <a href="https://github.com/PhilopaterHany" target="_blank">
+                        <a href="https://github.com/PhilopaterHany" >
                             <i class="fab fa-github"></i>
                         </a>
                     </div>
