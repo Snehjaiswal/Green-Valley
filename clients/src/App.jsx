@@ -22,30 +22,26 @@ function App() {
   return (
     <>
       <Header />
-      {/* <Navbar /> */}
+
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
-        <Route path='/cart' element={<CartProvider>   
+        <Route path='/cart' element={<CartProvider>
           <Cart />
-          </CartProvider>}></Route>
+        </CartProvider>}></Route>
 
-          <Route path="/home" element={<Home/>}/> 
-          <Route path="/shop" element={<App1/>}/>
-          <Route path="/blog" element={<Blogs/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/grocer" element={<Grocer/>}/>
-          <Route path="/grocerhome" element={<Grocerhome/>}/>
-          <Route path="/profilePage" element={<Profiepage/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/registration" element={<Registration/>}/>
+        <Route path="/home" element={<Home />} />
+        <Route path="/shop" element={<App1 />} />
+        <Route path="/blog" element={<Blogs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/grocer" element={<Grocer />} />
+        <Route path="/grocerhome" element={<Grocerhome />} />
+        <Route path="/profilePage" element={<Profiepage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
 
-          <Route path="/userprofile" element={<Userprofile/>}/>
-          <Route path="/adminprofile" element={<Adminprofile/>}/>
-          <Route path="/sellerProfile" element={<SellerProfile/>}/>
-
-
-          
-
+        <Route path="/userprofile" element={<Userprofile />} />
+        <Route path="/adminprofile" element={<Adminprofile />} />
+        <Route path="/sellerProfile" element={<SellerProfile />} />
 
       </Routes>
       <Footer />

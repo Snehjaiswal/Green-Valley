@@ -6,7 +6,7 @@ function Footer() {
  
   return (
 <>
-<h1 className='text-center' style={{marginBottom:"0"}} onClick={(e)=>Swal.fire({
+<h1 className='text-center'  onClick={(e)=>Swal.fire({
     title: 'Paglu',
     text: 'You Are right 👍',
     icon: 'love',

@@ -1,16 +1,17 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useCart } from "react-use-cart";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+// import Container from 'react-bootstrap/Container';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+
 
 
 function Header() {
   const {
     // isEmpty,
     // totalUniqueItems,
-    // items,
+    items,
     // totalItems,
     cartTotal,
     // updateItemQuantity,
@@ -43,6 +44,13 @@ function Header() {
     navigate('/contact');
 
   }
+
+  const Cart = () => {
+    navigate('/cart');
+
+  }
+
+
   const profilePage = () => {
     if (roleid == 1) {
       navigate('/userprofile');
@@ -66,9 +74,9 @@ function Header() {
   return (
     <>
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand " href="#">GreenValley</a>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div className="container-fluid ">
+          <a className="navbar-brand " href="#"><h1 style={{paddingTop:"4px"}}>GreenValley</h1></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -97,14 +105,13 @@ function Header() {
               </div>
               </li>
               <li className="nav-item">
-              <a className="nav-link text-dark"><i data-count="3" className="fa fa-shopping-cart fa-5x fa-border icon-black badge"></i></a>
+              <a className="nav-link text-dark" onClick={Cart}><i className="fa-solid fa-cart-shopping"></i>[{count}]</a>
               </li>
 
 
             </ul>
 
 
-            {/* <form classname="d-flex "> */}
               <div className="dropdown dropleft" >
                 <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
@@ -121,25 +128,13 @@ function Header() {
                   <a className="dropdown-item" href="#">Logout</a>
                 </div>
               </div>
-            {/* </form> */}
+            
 
           </div>
         </div>
       </nav>
 
 
-
-
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home"></Navbar.Brand>
-          {/* <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link> */}
-          {/* </Nav> */}
-        </Container>
-      </Navbar>
     </>
   )
 }

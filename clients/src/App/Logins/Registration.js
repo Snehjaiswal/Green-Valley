@@ -14,38 +14,38 @@ function Registration() {
     return (
         <>
 
-            <form class="main">
+            <form className="main">
                 <h1>Sign Up</h1>
-                <div class="un">
+                <div className="un">
                     <input type="text" placeholder="Username *" required />
                 </div>
-                <div class="em">
+                <div className="em">
                     <input type="email" placeholder="E-mail *" required />
                 </div>
-                <div class="orp">
+                <div className="orp">
                     <input type="password" placeholder="Password *" required />
                 </div>
-                <div class="confp">
+                <div className="confp">
                     <input type="password" placeholder="Confirm Password *" required />
                 </div>
                 <button type="submit">Sign Up</button>
                 <h5>Have an Account? <a href='-' onClick={login}> Log In Here</a></h5>
                 <hr />
                 <h4>Or Register With</h4>
-                <div class="icons">
-                    <div class="icon-container">
+                <div className="icons">
+                    <div className="icon-container">
                         <a href="https://elzero.org/" >
-                            <i class="fab fa-facebook-f"></i>
+                            <i className="fab fa-facebook-f"></i>
                         </a>
                     </div>
-                    <div class="icon-container">
+                    <div className="icon-container">
                         <a href="https://elzero.org/" >
-                            <i class="fab fa-twitter"></i>
+                            <i className="fab fa-twitter"></i>
                         </a>
                     </div>
-                    <div class="icon-container">
+                    <div className="icon-container">
                         <a href="https://github.com/PhilopaterHany" >
-                            <i class="fab fa-github"></i>
+                            <i className="fab fa-github"></i>
                         </a>
                     </div>
                 </div>
