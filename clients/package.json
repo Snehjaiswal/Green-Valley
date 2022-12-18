@@ -25,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-use-cart": "^1.13.0",
     "styled-components": "^5.3.6",
+    "sweetalert2": "^11.6.15",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

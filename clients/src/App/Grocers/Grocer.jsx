@@ -44,9 +44,7 @@ function Grocer() {
 
   return (
     <>
-      <div className="eight">
-        <h1 className='GrocerHeading'>All Grocers</h1>
-      </div>
+
 
       <div className='card-group' id='GrocerCenter'>
 

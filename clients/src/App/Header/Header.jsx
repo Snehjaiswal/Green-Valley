@@ -21,7 +21,7 @@ function Header() {
 
   const navigate = useNavigate();
   const roleid = localStorage.getItem('roleid')
-  console.log(roleid);
+  // console.log(roleid);
 
   const home = () => {
     navigate('/home');
@@ -103,18 +103,18 @@ function Header() {
           
 
 
-              <div className="dropdown">
-                <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div className="dropdown" onClick={profilePage}>
+                <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                   </svg>
                 </button>
                 <div className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item" href="#">Dashboard</a>
+                  <a className="dropdown-item " href="#">Dashboard</a>
                   <a className="dropdown-item" href="#">Feedback</a>
                   <a className="dropdown-item" href="#">Setting</a>
-                  {/* <a className="dropdown-item" href="#">Setting</a> */}
+                
                   <hr />
                   <a className="dropdown-item" href="#">Logout</a>
                 </div>
@@ -129,16 +129,16 @@ function Header() {
 
 
 
-      {/* <Navbar bg="light" variant="light">
+      <Navbar bg="light" variant="light">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
+          <Navbar.Brand href="#home"></Navbar.Brand>
+          {/* <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
+            <Nav.Link href="#pricing">Pricing</Nav.Link> */}
+          {/* </Nav> */}
         </Container>
-      </Navbar> */}
+      </Navbar>
     </>
   )
 }

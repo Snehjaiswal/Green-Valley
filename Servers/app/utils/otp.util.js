@@ -23,7 +23,7 @@ class OTP {
 			const fullHash = `${hash}.seperator.${expires}`;
 		
 			return {
-				otp: otp,
+				otp: 123456,
 				expires: expires,
 			};
 		} catch (error) {
