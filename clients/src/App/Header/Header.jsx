@@ -63,7 +63,6 @@ function Header() {
 
 
 
-
   return (
     <>
 
@@ -74,7 +73,7 @@ function Header() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link text-dark" onClick={home}>Home</a>
               </li>
@@ -91,36 +90,38 @@ function Header() {
                 <a className="nav-link text-dark" onClick={contact} >Contact</a>
               </li>
 
+              <li className="nav-item">
+              <div className="form-group has-search">
+                <span className="fa fa-search form-control-feedback"></span>
+                <input type="text" className="form-control" placeholder="Search" />
+              </div>
+              </li>
+              <li className="nav-item">
+              <a className="nav-link text-dark"><i data-count="3" className="fa fa-shopping-cart fa-5x fa-border icon-black badge"></i></a>
+              </li>
 
 
             </ul>
 
 
-            <form classname="d-flex ">
-              {/* <input classname="form-control ms-auto" type="search" placeholder="Search" aria-label="Search" />
-              <button classname="btn btn-outline" type="submit">Search</button> */}
-              <div classname="header-profile">
-          
-
-
-              <div className="dropdown" onClick={profilePage}>
-                <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            {/* <form classname="d-flex "> */}
+              <div className="dropdown dropleft" >
+                <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                     <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
                   </svg>
                 </button>
-                <div className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item " href="#">Dashboard</a>
+                <div className="dropdown-menu pull-right" aria-labelledby="dropdownMenuButton" style={{paddingTop:"100px" ,right: "0", left: "auto"}}>
+                  <a className="dropdown-item " onClick={profilePage}>Dashboard</a>
                   <a className="dropdown-item" href="#">Feedback</a>
                   <a className="dropdown-item" href="#">Setting</a>
-                
+
                   <hr />
                   <a className="dropdown-item" href="#">Logout</a>
                 </div>
               </div>
-              </div>
-            </form>
+            {/* </form> */}
 
           </div>
         </div>

@@ -1,5 +1,29 @@
 /* -------------HEADER CSS----------------------- */
 
+i {
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  .badge:after {
+    content: attr(data-count);
+    position: absolute;
+    background: #ff6600;
+    height: 2rem;
+    top: 1rem;
+    right: 1.5rem;
+    width: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid #ff6600;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
 
 ::-webkit-scrollbar {
     display: none;
@@ -1538,9 +1562,27 @@ li {
 
 
 
+/*-------------------------- Header Search button------------------------- */
 
+.has-search{
+    padding-top: 18px;
+}
+.has-search .form-control {
+    height: 30px;
+    padding-left: 2.375rem;
+}
 
-
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.275rem;
+    line-height: 2.255rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
 
 /* -------------HOME CSS----------------------- */
 
