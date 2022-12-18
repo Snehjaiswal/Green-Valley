@@ -38,4 +38,4 @@ This project base on ecommerce and fullly advance.
 3. HTML , CSS , JavaScript ,Bootstrap
 4. MySQL(phpmyadmin) -Database
 5. MUI , React-data-table , React Hooks 
-6. Heroku , GitHub , Git
+6. Heroku , GitHub , Git ,Nodemailer
