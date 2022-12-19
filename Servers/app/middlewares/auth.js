@@ -37,7 +37,7 @@ class auth {
         token = authorization.split(' ')[1]
         
         // varift token
-        const { userID} =jwt.verify(token,process.env.SECRET_KEY)    
+        const { userID} =jwt.verify('hampagalnhihebhaiya')    
 
         // Get user from token
         req.user = await UserModel.findById(userID).select('-password')

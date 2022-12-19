@@ -43,6 +43,9 @@ function Header() {
     navigate('/contact');
 
   }
+  const Cart = () => {
+    navigate('/cart')
+  }
   const profilePage = () => {
     if (roleid == 1) {
       navigate('/userprofile');
@@ -56,13 +59,35 @@ function Header() {
     }
   }
 
+const logoutuser = ()=>{
+  console.log("logout");
+  localStorage.clear();
+  navigate('/login');
+}
+
 
   // Local Storeage 
   const count = localStorage.getItem('count')
   // const prize = localStorage.getItem('prize')
 
+  function Profilefunc() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
 
 
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
   return (
     <>
@@ -88,57 +113,61 @@ function Header() {
                 <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
               </li>
               <li className="nav-item">
+
+                <div className="dropdown">
+                  <a className="nav-link text-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false"  >Pages</a>
+
+
+                  <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{ width: '0px' }}>
+                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
+                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
+                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link text-dark" onClick={contact} >Contact</a>
               </li>
 
+            </ul>
+            <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link text-dark" onClick={Cart} ><i className="fa-solid fa-cart-shopping"></i>[1]</a>
+
+              </li>   <li className="nav-item">
+                <a className="nav-link text-dark"  ><i className="fa-sharp fa-solid fa-bell"></i></a>
+              </li>
+              <li className="nav-item dropdown">
+                {!roleid ? <a className="nav-link text-dark" onClick={Cart} href="/login">Login</a> : <>
+                  <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><i className="fa-solid fa-user"></i></a>
+                  <div id="myDropdown" className="dropdown-content" >
+                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                      <li>
+                        <a href="#home p-0" style={{ paddingTop: '8px' }}><img
+                          className="profile-user-img img-responsive img-circle ms-5  rounded-circle"
+                          src="http://app.smartalgo.in/assets/dist/img/avatar.png"
+                          alt="User profile picture"
+                          style={{ width: "60px", border: "3px solid black", textAlign: "center", justifyContent: "center" }} />
+                        </a>
+                      </li>
+                      <hr style={{ border: "1px solid black", paddingLeft: "0", paddingRight: "0" }} />
+                      <li>  <a onClick={profilePage}>Dashboard</a></li>
+                      <li>  <a href="setting">setting</a></li>
+                      <li>  <a href="about">About us</a></li>
+                      <li>  <a onClick={logoutuser} href="login">Logout</a></li>
+                    </ul>
+
+
+                  </div>
+                </>} </li>
 
 
             </ul>
-
-
-            <form classname="d-flex ">
-              {/* <input classname="form-control ms-auto" type="search" placeholder="Search" aria-label="Search" />
-              <button classname="btn btn-outline" type="submit">Search</button> */}
-              <div classname="header-profile">
-          
-
-
-              <div className="dropdown" onClick={profilePage}>
-                <button className=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  <svg xmlns="http://www.w3.org/2000/svg" width={36} height={36} fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                    <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                  </svg>
-                </button>
-                <div className="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item " href="#">Dashboard</a>
-                  <a className="dropdown-item" href="#">Feedback</a>
-                  <a className="dropdown-item" href="#">Setting</a>
-                
-                  <hr />
-                  <a className="dropdown-item" href="#">Logout</a>
-                </div>
-              </div>
-              </div>
-            </form>
-
           </div>
         </div>
       </nav>
 
-
-
-
-      <Navbar bg="light" variant="light">
-        <Container>
-          <Navbar.Brand href="#home"></Navbar.Brand>
-          {/* <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link> */}
-          {/* </Nav> */}
-        </Container>
-      </Navbar>
     </>
   )
 }
