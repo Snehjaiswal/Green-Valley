@@ -17,6 +17,7 @@ import Login from "./App/Logins/Login";
 import Adminprofile from "./App/Admin/Profile/Adminprofile";
 import SellerProfile from "./App/Seller/Profile/SellerProfile";
 import Userprofile from "./App/Profile-Page/Userprofile";
+import Otpverify from "./App/Logins/Otpverify";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Cart />
         </CartProvider>}></Route>
 
+<<<<<<< HEAD
         <Route path="/home" element={<Home />} />
         <Route path="/shop" element={<App1 />} />
         <Route path="/blog" element={<Blogs />} />
@@ -38,6 +40,26 @@ function App() {
         <Route path="/profilePage" element={<Profiepage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+=======
+          <Route path="/home" element={<Home/>}/> 
+          <Route path="/shop" element={<App1/>}/>
+          <Route path="/blog" element={<Blogs/>}/>
+          <Route path="/contact" element={<Contact/>}/>
+          <Route path="/grocer" element={<Grocer/>}/>
+          <Route path="/grocerhome" element={<Grocerhome/>}/>
+          <Route path="/profilePage" element={<Profiepage/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/registration" element={<Registration/>}/>
+
+          <Route path="/userprofile" element={<Userprofile/>}/>
+          <Route path="/adminprofile" element={<Adminprofile/>}/>
+          <Route path="/sellerProfile" element={<SellerProfile/>}/>
+          <Route path="/otpverify" element={<Otpverify/>}/>
+
+
+
+          
+>>>>>>> 5c4ea0d8625c106901cb7975c7bebf0e88e321ad
 
         <Route path="/userprofile" element={<Userprofile />} />
         <Route path="/adminprofile" element={<Adminprofile />} />

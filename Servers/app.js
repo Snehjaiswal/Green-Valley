@@ -24,7 +24,11 @@ app.get("/home", (req, res) => res.send("Welcome every one...."));
 app.use("/api/login", require("./app/routes/Login.route"));
 app.use("/api/otp", require("./app/routes/otp.router"));
 
-const port = process.env.PORT
+app.get('/',(req,res)=>{
+  console.log("okk");
+  res.send("okk")
+})
+const port = 5050
 // Server start
 app.listen(port, () =>
   console.log(`Server is running on http://127.0.0.1:${port}`)

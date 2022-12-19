@@ -51,7 +51,7 @@ class Login {
 
             // It's help Otp generater
             const { otp, expires } = await OtpUtil.generateOTP(email);
-            // console.log({ otp, expires })
+            console.log({ otp, expires })
 
             const url = ` OTP: ${otp} `; //url for email
 
@@ -97,7 +97,7 @@ class Login {
 
 
         const isValid = await LoginModel.findOne({ email: email });
-        // console.log({ isValid });
+        console.log({ isValid });
 
 
         // CHECK OTP  EXPIRE IS VALID OR NOT
@@ -110,12 +110,13 @@ class Login {
         }
 
         // Shubham
+        console.log("otp",otp);
 
-        if (otp === isValid.otp) {
+        if (otp == isValid.otp) {
 
             // Genwrate JWT Token
             const token = jwt.sign({ userID: isValid._id },
-                process.env.SECRET_KEY, { expiresIn: '1d' })
+                "hampagalnhihebhaiya", { expiresIn: '1d' })
 
             res.status(200).json({ msg: "Otp is Corect", "token": token, "status": "success", });
 
@@ -159,7 +160,7 @@ class Login {
 
             // Genwrate JWT Token
             const token = jwt.sign({ userID: user._id ,email:email},
-                process.env.SECRET_KEY, { expiresIn: '1d' })
+                'hampagalnhihebhaiya', { expiresIn: '1d' })
 
 
             res.status(200).json({ msg: "Login success!", "token": token, "status": "success", });

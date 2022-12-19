@@ -1,6 +1,39 @@
 /* -------------HEADER CSS----------------------- */
 
 
+
+  
+  .dropdown-content {
+
+    display: none;
+    position: absolute;
+    background-color: #ffffff !important;
+    width: 360px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -99991;
+    left: -350%;
+  
+    
+  }
+  
+  .dropdown-content a {
+    color: black;
+    /* padding-left: 0px; */
+    text-decoration: none;
+    display: block;
+  }
+
+  
+  /* .dropdown a:hover {background-color: rgb(255, 255, 255);} */
+  
+  .show {display: block;}
+
+
+
+
+
+  
 ::-webkit-scrollbar {
     display: none;
 }
@@ -100,9 +133,9 @@ h6 {
 }
 
 
-.form-control {
+/* .form-control {
     color: #db5246;
-}
+} */
 
 section {
     padding: 50px 0px;
@@ -1701,6 +1734,8 @@ button .my-btn {
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2;
+    overflow: hidden;
+    z-index: -1;
 
 }
 
@@ -2934,3 +2969,169 @@ footer .copy-right {
 }
 
 /* --------------------------------------------------------SIDE TOGGLE MODAL HEADER-------------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------------OTP VERIFY--------------------------------- */
+.wrapper {
+    margin: 150px auto;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  
+.title {
+    padding-top: 50px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+.title h3 {
+    font-weight: bold;
+}
+.title p {
+    font-size: 12px;
+    color: #118a44;
+}
+.title p.msg {
+    color: initial;
+    text-align: initial;
+    font-weight: bold;
+}
+.otp-input-fields {
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px #020250 44;
+    max-width: 400px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 40px;
+}
+.otp-input-fields input {
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #2f8f1f;
+    text-align: center;
+    outline: none;
+    font-size: 16px;
+   /* Firefox */
+}
+.otp-input-fields input::-webkit-outer-spin-button, .otp-input-fields input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* .otp-input-fields input[type=number] {
+    -moz-appearance: textfield;
+} */
+.otp-input-fields input:focus {
+    border-width: 2px;
+    border-color: #287a1a;
+    font-size: 20px;
+}
+.result {
+    max-width: 400px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+.result p {
+    font-size: 24px;
+    font-family: 'Antonio', sans-serif;
+    opacity: 1;
+    transition: color 0.5s ease;
+}
+.result p._ok {
+    color: green;
+}
+.result p._notok {
+    color: red;
+    border-radius: 3px;
+}
+
+
+
+/* --------------------------------------OTP BUTTON ------------------------------- */
+/* Btn 10  */
+.btn10{
+    top: 40px;
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase!important;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: hand;
+    text-align: center;
+    text-transform: capitalize;
+    border: 1px solid #fff;
+    border-radius:50px;
+    position: relative;
+    overflow: hidden!important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent!important;
+    z-index:10;
+    
+}
+
+
+.btn10:hover{
+    border: 1px solid #071982;
+	  color: #80ffd3!important;
+}
+.btn10::before {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #071982;
+    position: absolute;
+	  -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -moz-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+	   box-shadow:2px 0px 14px rgba(0,0,0,.6);
+  } 
+
+.btn10::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    display: block;
+    background: #80ffd3;
+    position: absolute;
+	-ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg); 
+    transform: skewX(-20deg);   
+    left: -10%;
+    opacity: 0;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .94s cubic-bezier(.2,.95,.57,.99);
+    -moz-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    -o-transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    transition: all .4s cubic-bezier(.2,.95,.57,.99);
+    box-shadow: 2px 0px 14px rgba(0,0,0,.6);
+}
+.btn10:hover::before, .btn1O:hover::before{
+	opacity:1;
+	width: 116%;
+}
+.btn10:hover::after, .btn1O:hover::after{
+	opacity:1;
+	width: 120%;
+}
