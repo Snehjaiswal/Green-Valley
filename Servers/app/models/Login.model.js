@@ -35,6 +35,10 @@ const LoginSchema = Schema({
     otp: "",
     expires: "",
     isVerifyed: Boolean,
+    roleId:{
+        type:Number,
+        default:1
+    }
 },
     {
         timestamps: true
