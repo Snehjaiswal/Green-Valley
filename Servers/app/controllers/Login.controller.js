@@ -50,9 +50,9 @@ class Login {
             const cpasswordHash = await bcrypt.hash(cpassword, 10);
 
             // Password and confirm password match
-            if(passwordHash !=cpasswordHash){
-                return res.status(400).send({ msg: "Password And Confirm Password Not Match" });
-            }
+            // if(passwordHash !=cpasswordHash){
+            //     return res.status(400).send({ msg: "Password And Confirm Password Not Match" });
+            // }
 
             // It's help Otp generater
             const { otp, expires } = await OtpUtil.generateOTP(email);

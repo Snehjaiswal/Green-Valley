@@ -35,8 +35,11 @@ function Login1() {
                             <div className="group input-group">
                                 <input type="password" placeholder="Password" required pattern=".{8,}" />
                             </div>
+                            <div className="group input-group">
+                                <input type="password" placeholder="Confirm Password" required pattern=".{8,}" />
+                            </div>
                             <div className="alert-text signup__alert">
-                                <span className="help__text">At least 8 character</span>
+                                {/* <span className="help__text">At least 8 character</span> */}
                             </div>
                             <div className="group button-group">
                                 <button className="signup-btn" onclick="return false;">Sign Up</button>
@@ -69,7 +72,7 @@ function Login1() {
                                 <input type="password" placeholder="Password" required pattern=".{8,}" />
                             </div>
                             <div className="alert-text signup__alert">
-                                <span className="help__text">At least 8 character</span>
+                                {/* <span className="help__text">At least 8 character</span> */}
                             </div>
                             <div className="form-link forgot">
                                 <a href="#" className="login-link">Forgot your password?</a>
