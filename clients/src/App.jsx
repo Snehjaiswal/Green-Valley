@@ -18,6 +18,7 @@ import Adminprofile from "./App/Admin/Profile/Adminprofile";
 import SellerProfile from "./App/Seller/Profile/SellerProfile";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
+import Login1 from "./App/Logins/Login1";
 
 function App() {
   return (
@@ -44,6 +45,8 @@ function App() {
           <Route path="/adminprofile" element={<Adminprofile/>}/>
           <Route path="/sellerProfile" element={<SellerProfile/>}/>
           <Route path="/otpverify" element={<Otpverify/>}/>
+          <Route path="/login1" element={<Login1/>}/>
+
 
 
 

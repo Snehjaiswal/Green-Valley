@@ -24,12 +24,12 @@ class Login {
 
             // CHECK ALL FIELD IN FILL
             if (!Name || !email || !password || !cpassword)
-                return res.status(400).json({ msg: "Please fill in all fields." });
+                return res.status(400).send({ msg: "Please fill in all fields." });
 
 
             // EMAIL VALIDATER
             if (!validateEmail(email))
-                return res.status(400).json({ msg: "Invalid emails." });
+                return res.status(400).send({ msg: "Invalid emails." });
 
 
             // CHECK EMAIL IS ALREADY EXISTS ARE NOT
@@ -37,17 +37,22 @@ class Login {
 
             // TTL INDEX USE
             if (user)
-                return res.status(400).json({ msg: "This email already exists." });
+                return res.status(400).send({ msg: "This email already exists." });
 
             // CHECK PASSWORD LENGTH
             if (password.length < 6)
                 return res
                     .status(400)
-                    .json({ msg: "Password must be at least 6 characters." });
+                    .send({ msg: "Password must be at least 6 characters." });
 
             //Hash password
             const passwordHash = await bcrypt.hash(password, 10);
             const cpasswordHash = await bcrypt.hash(cpassword, 10);
+
+            // Password and confirm password match
+            if(passwordHash !=cpasswordHash){
+                return res.status(400).send({ msg: "Password And Confirm Password Not Match" });
+            }
 
             // It's help Otp generater
             const { otp, expires } = await OtpUtil.generateOTP(email);
@@ -79,13 +84,13 @@ class Login {
             //     process.env.SECRET_KEY, { expiresIn: '1d' }
             // )
 
-            res.json({
+            res.send({
                 status: "panddig",
                 msg: "Register Success! Please activate your email to start.",
             });
 
         } catch (err) {
-            return res.status(500).json({ msg: err.message });
+            return res.status(500).send({ msg: err.message });
         }
     }
 
@@ -103,14 +108,14 @@ class Login {
         // CHECK OTP  EXPIRE IS VALID OR NOT
         const now = Date.now();
         if (now > + isValid.expires) {
-            res.json({
+            res.send({
                 verification: false,
                 msg: "OTP Expired!",
             })
         }
 
         // Shubham
-        console.log("otp",otp);
+        console.log("otp", otp);
 
         if (otp == isValid.otp) {
 
@@ -118,7 +123,7 @@ class Login {
             const token = jwt.sign({ userID: isValid._id },
                 "hampagalnhihebhaiya", { expiresIn: '1d' })
 
-            res.status(200).json({ msg: "Otp is Corect", "token": token, "status": "success", });
+            res.status(200).send({ msg: "Otp is Corect", "token": token, "status": "success", });
 
             // find and update is varified (true)
             const verifyAccount = LoginModel.findOneAndUpdate({ email: email }, { $set: { isVerifyed: true } })
@@ -130,7 +135,7 @@ class Login {
 
 
         } else {
-            res.status(400).json({ msg: "Otp is incorect" });
+            res.status(400).send({ msg: "Otp is incorect" });
         }
 
     }
@@ -150,27 +155,27 @@ class Login {
 
             //  CHECK EMAIL IS VALID OR NOT
             if (!user)
-                return res.status(400).json({ msg: "This email in not Verified." });
+                return res.status(400).send({ msg: "This email in not Verified." });
 
             const isMatch = await bcrypt.compare(password, user.password);
             if ((user.email === email) && !isMatch)
 
-                return res.status(400).json({ msg: "Email or password is not valid." });
+                return res.status(400).send({ msg: "Email or password is not valid." });
 
 
             // Genwrate JWT Token
-            const token = jwt.sign({ userID: user._id ,email:email},
+            const token = jwt.sign({ userID: user._id, email: email },
                 'hampagalnhihebhaiya', { expiresIn: '1d' })
 
 
-            res.status(200).json({ msg: "Login success!", "token": token, "status": "success", });
+            res.status(200).send({ msg: "Login success!", "token": token, "status": "success", });
 
 
             console.log(`Login Success!`);
 
 
         } catch (err) {
-            return res.status(500).json({ msg: err.message });
+            return res.status(500).send({ msg: err.message });
         }
     }
 

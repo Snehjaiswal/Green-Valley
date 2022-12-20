@@ -36,7 +36,7 @@ const SignUp = ()=>{
     .then(function (response) {
       console.log("response",response);
     //   navigate('/otpverify',{state:{emaiil:email,id:63a136ba204d9bbfb0933ec9}});
-    //   navigate('/otpverify',{state:email});
+      navigate('/otpverify',{state:email});
 
     })
     .catch(function (error) {
