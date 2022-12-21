@@ -11,6 +11,7 @@ function Login1() {
    
     const [first, setfirst] = useState('')
     const [name, setName] = useState('')
+    const [passwor,setPassword] =  useState('')
     const Registration = () => {
         navigate('/registration');
     
@@ -22,6 +23,7 @@ function Login1() {
           url: 'http://localhost:5050/api/login/signin',
     
           data: {
+            "name":name,
             "email": email,
             "password": password
           }
@@ -61,13 +63,13 @@ function Login1() {
                         </span>
                         <div className="button-input-group">
                             <div className="group input-group">
-                                <input type="text" placeholder="Name" required />
+                                <input type="text" placeholder="Name" onChange={(e) => { setName(e.target.value) }}  required />
                             </div>
                             <div className="group input-group">
-                                <input type="email" placeholder="Email" required />
+                                <input type="email" placeholder="Email" onChange={(e) => { setemail(e.target.value) }}  required />
                             </div>
                             <div className="group input-group">
-                                <input type="password" placeholder="Password" required pattern=".{8,}" />
+                                <input type="password" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }}  required pattern=".{8,}" />
                             </div>
                             <div className="group input-group">
                                 <input type="password" placeholder="Confirm Password" required pattern=".{8,}" />
@@ -76,7 +78,7 @@ function Login1() {
                                 {/* <span className="help__text">At least 8 character</span> */}
                             </div>
                             <div className="group button-group">
-                                <button className="signup-btn" >Sign Up</button>
+                                <button className="signup-btn" onClick={Login}  >Sign Up</button>
                             </div>
                         </div>
                     </form>
@@ -112,7 +114,7 @@ function Login1() {
                                 <a href="#" className="login-link">Forgot your password?</a>
                             </div>
                             <div className="group button-group">
-                                <button className="signin-btn" onClick={Login} >Sign in</button>
+                                <button className="signin-btn" >Sign in</button>
                             </div>
                         </div>
                     </form>
