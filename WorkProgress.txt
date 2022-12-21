@@ -13,4 +13,4 @@ ok
 
 Anmol :-
 
-1. Read mongo db and structure
+1. Read lookup in mongo && api call in sign in PAGE
