@@ -18,7 +18,8 @@ function Header() {
     // emptyCart
   } = useCart();
 
-
+  let Token = localStorage.getItem("token");
+  console.log("🚀  file: App.js  line 14  App  isToken   ", Token);
   const navigate = useNavigate();
   const roleid = localStorage.getItem('roleid')
   // console.log(roleid);
