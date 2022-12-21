@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
@@ -7,58 +7,45 @@ function Login() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-// console.log("email",email);
-
-
-
+  // console.log("email",email);
   const Registration = () => {
     navigate('/registration');
 
   }
+  const Login = () => {
+    var config = {
+      method: 'post',
+      url: 'http://localhost:5050/api/login/signin',
 
-const Login= ()=>{
-  var config = {
-    method: 'post',
-    url: 'http://localhost:5050/api/login/signin',
+      data: {
+        "email": email,
+        "password": password
+      }
+    };
+console.log('kdhjkdhjksdgjsdgcjhd');
+    axios(config)
+      .then(function (response) {
+        console.log(response.data);
+        localStorage.setItem('roleid', 1)
+        console.log('kdhjkdhjksdgjsdgcjhd',response.data);
+        navigate('/userprofile');
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
 
-    data : {
-    "email":email,
-      "password": password
   }
-  };
-  
-  axios(config)
-  .then(function (response) {
-    console.log(response.data);
-    localStorage.setItem('roleid',1)
-    navigate('/userprofile');
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-  
-}
-  
- 
-
-
-
-
-
-
-
   return (
     <>
-
 
       <div className="main">
         <h1>Login</h1>
         <div className="un">
-          <input type="text" placeholder="Username/Email" onChange={(e)=>{setemail(e.target.value)}}  required />
+          <input type="text" placeholder="Username/Email" onChange={(e) => { setemail(e.target.value) }} required />
         </div>
 
         <div className="orp">
-          <input type="password" placeholder="Password *"  onChange={(e)=>{setpassword(e.target.value)}}  required />
+          <input type="password" placeholder="Password *" onChange={(e) => { setpassword(e.target.value) }} required />
         </div>
 
         <button type="submit" onClick={Login}>Login</button>
