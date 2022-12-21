@@ -13,9 +13,8 @@ ok
 
 Anmol :-
 
-<<<<<<< Updated upstream
+
 1. Read lookup in mongo && api call in sign in PAGE
-=======
+
 Anmol :-
 1. create simple api in mongo
->>>>>>> Stashed changes
