@@ -13,7 +13,7 @@ const jwt = require('jsonwebtoken');
 
 const LoginSchema = Schema({
 
-    Name: {
+    username: {
         type: String,
         required: [true, "Please enter your name!"],
         trim: true

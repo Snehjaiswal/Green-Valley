@@ -20,52 +20,52 @@ class Login {
     async signup(req, res) {
 
         try {
-            const { Name, email, password, cpassword } = req.body;
+            const { username, email, password, cpassword } = req.body;
 
+            console.log(req.body);
             // // CHECK ALL FIELD IN FILL
             // if (!Name || !email || !password || !cpassword)
-            //     return res.status(400).send({ msg: "Please fill in all fields." });
+            //     return res.send({ msg: "Please fill in all fields." });
 
 
             // EMAIL VALIDATER
             if (!validateEmail(email))
-                return res.status(400).send({ msg: "Invalid emails." });
+                return res.send({ msg: "Invalid emails." });
 
 
             // CHECK EMAIL IS ALREADY EXISTS ARE NOT
             const user = await LoginModel.findOne({ email });
 
             // TTL INDEX USE
-            if (user)
-                return res.status(400).send({ msg: "This email already exists." });
+            if (user) { res.send({ msg: "This email already exists." }); }
 
             // CHECK PASSWORD LENGTH
-            if (password.length < 6)
-                return res
-                    .status(400)
-                    .send({ msg: "Password must be at least 6 characters." });
+            if (password.length < 6) { res.send({ msg: "Password must be at least 6 characters." }); }
+
+            if (password == cpassword) {
+                res.send({ msg: "Password not match" });
+            }
 
             //Hash password
             const passwordHash = await bcrypt.hash(password, 10);
             const cpasswordHash = await bcrypt.hash(cpassword, 10);
 
-            // Password and confirm password match
-            // if(passwordHash !=cpasswordHash){
-            //     return res.status(400).send({ msg: "Password And Confirm Password Not Match" });
-            // }
+
 
             // It's help Otp generater
             const { otp, expires } = await OtpUtil.generateOTP(email);
-            console.log({ otp, expires })
+           
 
             const url = ` OTP: ${otp} `; //url for email
 
             // it's help send mail
             // sendMail.sendVerificationMail(email, url, "Verify your email address");
 
+
+
             // it's help save data in db
             const newUser = new LoginModel({
-                Name,
+                username,
                 email,
                 password: passwordHash,
                 cpassword: cpasswordHash,
@@ -74,23 +74,25 @@ class Login {
                 expires,
             });
 
+            console.log({ "ok": newUser });
             //STORE YOUR LOGIN DATA IN DB 
             await newUser.save();
-            console.log({ newUser });
 
-            // const saved_user = await LoginModel.findOne({ email: email })
-            // // Genwrate JWT Token
-            // const token = jwt.sign({ userID: saved_user._id },
-            //     process.env.SECRET_KEY, { expiresIn: '1d' }
-            // )
+            const saved_user = await LoginModel.findOne({ email: email })
 
-            res.send({
+            // Genwrate JWT Token
+            const token = jwt.sign({ userID: saved_user._id },
+                "nvnfjvfvfvfvbbbfvf", { expiresIn: '1d' }
+            )
+
+            res.status(200).send({
                 status: "panddig",
                 msg: "Register Success! Please activate your email to start.",
+                token:token
             });
 
         } catch (err) {
-            return res.status(500).send({ msg: err.message });
+             res.status(200).send({ msg: err.message });
         }
     }
 
@@ -135,7 +137,7 @@ class Login {
 
 
         } else {
-            res.status(400).send({ msg: "Otp is incorect" });
+            res.send({ msg: "Otp is incorect" });
         }
 
     }
@@ -155,12 +157,12 @@ class Login {
 
             //  CHECK EMAIL IS VALID OR NOT
             if (!user)
-                return res.status(400).send({ msg: "This email in not Verified." });
+                return res.send({ msg: "This email in not Verified." });
 
             const isMatch = await bcrypt.compare(password, user.password);
             if ((user.email === email) && !isMatch)
 
-                return res.status(400).send({ msg: "Email or password is not valid." });
+                return res.send({ msg: "Email or password is not valid." });
 
 
             // Genwrate JWT Token

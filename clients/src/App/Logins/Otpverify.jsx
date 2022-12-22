@@ -45,7 +45,7 @@ const OtpVerify =()=>{
 
   var config = {
     method: 'post',
-    url: 'http://localhost:5050/api/login/VerifyedOTP',
+    url: 'http://localhost:7070/api/login/VerifyedOTP',
 
     data: {
       "email": email,

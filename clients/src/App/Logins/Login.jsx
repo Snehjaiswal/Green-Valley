@@ -14,13 +14,13 @@ function Login() {
 
 
     const Signup = () => {
-        console.log('dg,fgflg,erl,');
+      
         var config = {
             method: 'post',
-            url: 'http://localhost:5050/api/login/signup',
+            url: 'http://localhost:7070/api/login/signup',
 
             data: {
-                "name": name,
+                "username": name,
                 "email": email,
                 "password": password,
                 "cpassword": cpassword
@@ -28,9 +28,14 @@ function Login() {
         };
         axios(config)
             .then(function (response) {
-                console.log(response.data);
+                console.log("response",response.data.status);
                 localStorage.setItem('userEmail', email)
-                navigate('/userprofile');
+                if(response.data.status == 'panddig'){
+                    navigate('/Otpverify');
+                }else{
+                    alert(response.data.status)
+                }
+                
             })
             .catch(function (error) {
                 console.log(error);
@@ -42,10 +47,10 @@ function Login() {
 
 
     const SignIn = () => {
-        console.log('dg,fgflg,erl,');
+     
         var config = {
             method: 'post',
-            url: 'http://localhost:5050/api/login/signin',
+            url: 'http://localhost:7070/api/login/signin',
 
             data: { 
                 "email": email,
@@ -55,8 +60,12 @@ function Login() {
         axios(config)
             .then(function (response) {
                 console.log(response.data);
-                
-                navigate('/userprofile');
+                if(response.data.status == 200){
+                    navigate('/userprofile');
+                }else{
+                    alert(response.data.status)
+                    
+                }
             })
             .catch(function (error) {
                 console.log(error);
@@ -93,10 +102,10 @@ function Login() {
                                 <input type="email" placeholder="Email" onChange={(e) => { setemail(e.target.value) }} required />
                             </div>
                             <div className="group input-group">
-                                <input type="password" placeholder="Password" onChange={(e) => { setpassword(e.target.value) }} required pattern=".{8,}" />
+                                <input type="text" placeholder="Password" onChange={(e) => { setpassword(e.target.value) }} required pattern=".{8,}" />
                             </div>
                             <div className="group input-group">
-                                <input type="password" placeholder="Confirm Password" onChange={(e) => { setcPassword(e.target.value) }} required pattern=".{8,}" />
+                                <input type="text" placeholder="Confirm Password" onChange={(e) => { setcPassword(e.target.value) }} required pattern=".{8,}" />
                             </div>
                             <div className="alert-text signup__alert">
                                 {/* <span className="help__text">At least 8 character</span> */}
