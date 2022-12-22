@@ -22,9 +22,9 @@ class Login {
         try {
             const { Name, email, password, cpassword } = req.body;
 
-            // CHECK ALL FIELD IN FILL
-            if (!Name || !email || !password || !cpassword)
-                return res.status(400).send({ msg: "Please fill in all fields." });
+            // // CHECK ALL FIELD IN FILL
+            // if (!Name || !email || !password || !cpassword)
+            //     return res.status(400).send({ msg: "Please fill in all fields." });
 
 
             // EMAIL VALIDATER
@@ -61,7 +61,7 @@ class Login {
             const url = ` OTP: ${otp} `; //url for email
 
             // it's help send mail
-            sendMail.sendVerificationMail(email, url, "Verify your email address");
+            // sendMail.sendVerificationMail(email, url, "Verify your email address");
 
             // it's help save data in db
             const newUser = new LoginModel({

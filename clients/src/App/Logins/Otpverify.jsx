@@ -4,14 +4,10 @@ import axios from 'axios'
 
 function Otpverify() {
   const navigate = useNavigate();
-  const [email, setemail] = useState("");
   const [otp, setotp] = useState("");
-  const [otp1, setotp1] = useState("");
 
-console.log("otp",otp);
-const location = useLocation();
 
-console.log("location",location);
+  const email = localStorage.getItem('userEmail')
 
   var otp_inputs = document.querySelectorAll(".otp__digit")
   var mykey = "0123456789".split("")
@@ -52,7 +48,7 @@ const OtpVerify =()=>{
     url: 'http://localhost:5050/api/login/VerifyedOTP',
 
     data: {
-      "email": location.state,
+      "email": email,
       "otp": otp
     }
   };
@@ -75,16 +71,16 @@ const OtpVerify =()=>{
       <form action="javascript: void(0)" className="otp-form" name="otp-form">
         <div className="title">
           <h3>OTP VERIFICATION</h3>
-          <p className="info">An otp has been sent to ********k876@gmail.com</p>
+          <p className="info">An otp has been sent to ***{email.slice(-3)}</p>
           <p className="msg">Please enter OTP to verify</p>
         </div>
         <div className="otp-input-fields">
-          <input type="number" className="otp__digit otp__field__1" step="1" onChange={(e) => { setotp1(e.target.value) }} />
-          <input type="number" className="otp__digit otp__field__2" step="1" onChange={(e) => { setotp1(e.target.value) }} />
-          <input type="number" className="otp__digit otp__field__3" step="1" onChange={(e) => { setotp1(e.target.value) }} />
-          <input type="number" className="otp__digit otp__field__4" step="1" onChange={(e) => { setotp1(e.target.value) }} />
-          <input type="number" className="otp__digit otp__field__5" step="1" onChange={(e) => { setotp1(e.target.value) }} />
-          <input type="number" className="otp__digit otp__field__6" step="1" onChange={(e) => { setotp1(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__1" step="1" onChange={(e) => { setotp(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__2" step="1" onChange={(e) => { setotp(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__3" step="1" onChange={(e) => { setotp(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__4" step="1" onChange={(e) => { setotp(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__5" step="1" onChange={(e) => { setotp(e.target.value) }} />
+          <input type="number" className="otp__digit otp__field__6" step="1" onChange={(e) => { setotp(e.target.value) }} />
         </div>
         {/* <div className="result"><p id="_otp" class="_notok">Submit</p></div> */}
         <div className="result"><button onClick={OtpVerify}>Submit</button></div>

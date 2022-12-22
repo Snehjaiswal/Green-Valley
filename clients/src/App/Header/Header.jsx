@@ -1,28 +1,18 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useCart } from "react-use-cart";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+
 
 
 function Header() {
   const {
-    // isEmpty,
-    // totalUniqueItems,
-    // items,
-    // totalItems,
+
     cartTotal,
-    // updateItemQuantity,
-    // removeItem,
-    // emptyCart
+  
   } = useCart();
 
-  let Token = localStorage.getItem("token");
-  console.log("🚀  file: App.js  line 14  App  isToken   ", Token);
   const navigate = useNavigate();
   const roleid = localStorage.getItem('roleid')
-  // console.log(roleid);
 
   const home = () => {
     navigate('/home');
@@ -47,6 +37,11 @@ function Header() {
   const Cart = () => {
     navigate('/cart')
   }
+
+const Login = ()=>{
+  navigate('/login')
+}
+
   const profilePage = () => {
     if (roleid == 1) {
       navigate('/userprofile');
@@ -69,26 +64,13 @@ const logoutuser = ()=>{
 
   // Local Storeage 
   const count = localStorage.getItem('count')
-  // const prize = localStorage.getItem('prize')
 
   function Profilefunc() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
 
 
-  // Close the dropdown if the user clicks outside of it
-  window.onClick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+ 
 
   return (
     <>
@@ -121,9 +103,9 @@ const logoutuser = ()=>{
 
 
                   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1" style={{ width: '0px' }}>
-                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
-                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
-                    <li><a className="dropdown-item text-dark" href="#" style={{ width: '100px', }}>Pages 1</a></li>
+                    <li><a className="dropdown-item text-dark" style={{ width: '100px', }}>Pages 1</a></li>
+                    <li><a className="dropdown-item text-dark" style={{ width: '100px', }}>Pages 1</a></li>
+                    <li><a className="dropdown-item text-dark" style={{ width: '100px', }}>Pages 1</a></li>
                   </ul>
                 </div>
               </li>
@@ -140,7 +122,7 @@ const logoutuser = ()=>{
                 <a className="nav-link text-dark"  ><i className="fa-sharp fa-solid fa-bell"></i></a>
               </li>
               <li className="nav-item dropdown">
-                {!roleid ? <a className="nav-link text-dark" onClick={Cart} href="/login">Login</a> : <>
+                {!roleid ? <a className="nav-link text-dark" onClick={Login} >Login</a> : <>
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><i className="fa-solid fa-user"></i></a>
                   <div id="myDropdown" className="dropdown-content" >
                     <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
@@ -156,7 +138,7 @@ const logoutuser = ()=>{
                       <li>  <a onClick={profilePage}>Dashboard</a></li>
                       <li>  <a href="setting">setting</a></li>
                       <li>  <a href="about">About us</a></li>
-                      <li>  <a onClick={logoutuser} href="login">Logout</a></li>
+                      <li>  <a onClick={logoutuser}>Logout</a></li>
                     </ul>
 
 

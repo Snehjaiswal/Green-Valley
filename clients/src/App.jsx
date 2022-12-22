@@ -12,19 +12,17 @@ import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
 import Grocerhome from './App/Grocers/Grocerhome'
 import Profiepage from "./App/Profile-Page/Userprofile";
-import Registration from "./App/Logins/Registration";
-import Login from "./App/Logins/Login";
 import Adminprofile from "./App/Admin/Profile/Adminprofile";
 import SellerProfile from "./App/Seller/Profile/SellerProfile";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
-import Login1 from "./App/Logins/Login1";
+import Login from "./App/Logins/Login";
 
 function App() {
   return (
     <>
       <Header />
-      {/* <Navbar /> */}
+     
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
         <Route path='/cart' element={<CartProvider>   
@@ -38,14 +36,12 @@ function App() {
           <Route path="/grocer" element={<Grocer/>}/>
           <Route path="/grocerhome" element={<Grocerhome/>}/>
           <Route path="/profilePage" element={<Profiepage/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/registration" element={<Registration/>}/>
 
           <Route path="/userprofile" element={<Userprofile/>}/>
           <Route path="/adminprofile" element={<Adminprofile/>}/>
           <Route path="/sellerProfile" element={<SellerProfile/>}/>
           <Route path="/otpverify" element={<Otpverify/>}/>
-          <Route path="/login1" element={<Login1/>}/>
+          <Route path="/login" element={<Login/>}/>
 
 
 
