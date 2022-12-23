@@ -56,6 +56,9 @@ const OtpVerify =()=>{
   axios(config)
     .then(function (response) {
       console.log(response);
+      localStorage.setItem('roleid',response.data.data.roleId)
+      localStorage.setItem('userid',response.data.data._id)
+
       navigate('/userprofile')
     })
     .catch(function (error) {
