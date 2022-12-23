@@ -79,13 +79,10 @@ class Login {
                 'checkthisissecretkey', { expiresIn: '1d' }
             )
 
-            res.send({
-
-                msg: "Register Success! Please activate your email to start.",
-            });
+            res.send({msg: "Register Success! Please activate your email to start."});
 
         } catch (err) {
-            return res.send({ msg: err.message });
+            return res.send({ msg:err });
         }
     }
 
@@ -109,7 +106,7 @@ class Login {
             })
         }
 
-console.log("otp",otp);
+        console.log("otp", otp);
 
         if (otp == isValid.otp) {
 
@@ -117,16 +114,16 @@ console.log("otp",otp);
             const token = jwt.sign({ userID: isValid._id },
                 'checkthisissecretkey', { expiresIn: '1d' })
 
-                
-                // find and update is varified (true)
-                const verifyAccount = LoginModel.findOneAndUpdate({ email: email }, { $set: { isVerifyed: true } })
+
+            // find and update is varified (true)
+            const verifyAccount = LoginModel.findOneAndUpdate({ email: email }, { $set: { isVerifyed: true } })
                 .then(() => {
                     console.log("successfully verifed");
                 }).catch((err) => {
                     console.log(err);
                 })
-                
-                res.send({ msg: "Otp is Corect", token: token,data:isValid });
+
+            res.send({ msg: "Otp is Corect", token: token, data: isValid });
 
         } else {
             res.send({ msg: "Otp is incorect" });
@@ -149,6 +146,9 @@ console.log("otp",otp);
 
             //  CHECK EMAIL IS VALID OR NOT
             if (!user)
+                return res.send({ msg: "This email in not Valid." });
+
+            if (user.isVerifyed == false)
                 return res.send({ msg: "This email in not Verified." });
 
             const isMatch = await bcrypt.compare(password, user.password);
@@ -162,7 +162,7 @@ console.log("otp",otp);
                 'checkthisissecretkey', { expiresIn: '1d' })
 
 
-            res.send({ msg: "Login success!", "token": token, "status": "success", });
+            res.send({ msg: "Login success!", "token": token, "status": "success", data: user });
 
 
             console.log(`Login Success!`);

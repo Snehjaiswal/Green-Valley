@@ -49,10 +49,7 @@ function Login() {
 
             })
             .catch(function (error) {
-
-                setShowAlert(true)
-                setAlertColor('error');
-                setTextAlert(error.data.msg);
+                alert(error)
             });
 
     }
@@ -74,15 +71,18 @@ function Login() {
         axios(config)
             .then(function (response) {
                 console.log(response.data);
-                if (response.data.status == 200) {
+                if (response.data.msg == 'Login success!') {
+                    localStorage.setItem('userEmail', email)
+                    localStorage.setItem('roleid',response.data.data.roleId)
+                    localStorage.setItem('userid',response.data.data._id)
                     navigate('/userprofile');
                 } else {
-                    alert(response.data.status)
+                    alert(response.data.msg)
 
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                alert(error)
 
             });
 
