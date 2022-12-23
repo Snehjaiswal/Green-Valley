@@ -14,7 +14,7 @@ const ItemCard = (props) => {
           <p className="card-text">{props.desc}</p>
 
           <button
-            className="btn btn-success"
+            className="btn btn-success" style={{paddingBottom:'30px',height:'5px',width:'100%'}}
             onClick={() => addItem(props.item)}
           >
             Add to Cart
