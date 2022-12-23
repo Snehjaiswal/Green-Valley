@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 function Footer() {
   const Swal = require('sweetalert2')

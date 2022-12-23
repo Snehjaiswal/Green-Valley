@@ -20,12 +20,11 @@ class Login {
     async signup(req, res) {
 
         try {
-            const { username, email, password, cpassword } = req.body;
-
+            const { Name, email, password, cpassword } = req.body;
             console.log(req.body);
-            // // CHECK ALL FIELD IN FILL
-            // if (!Name || !email || !password || !cpassword)
-            //     return res.send({ msg: "Please fill in all fields." });
+            // CHECK ALL FIELD IN FILL
+            if (!Name || !email || !password || !cpassword)
+                return res.send({ msg: "Please fill in all fields." });
 
 
             // EMAIL VALIDATER
@@ -37,35 +36,31 @@ class Login {
             const user = await LoginModel.findOne({ email });
 
             // TTL INDEX USE
-            if (user) { res.send({ msg: "This email already exists." }); }
+            if (user)
+                return res.send({ msg: "This email already exists." });
 
             // CHECK PASSWORD LENGTH
-            if (password.length < 6) { res.send({ msg: "Password must be at least 6 characters." }); }
+            if (password.length < 6)
+                return res
 
-            if (password == cpassword) {
-                res.send({ msg: "Password not match" });
-            }
+                    .send({ msg: "Password must be at least 6 characters." });
 
             //Hash password
             const passwordHash = await bcrypt.hash(password, 10);
             const cpasswordHash = await bcrypt.hash(cpassword, 10);
 
-
-
             // It's help Otp generater
             const { otp, expires } = await OtpUtil.generateOTP(email);
-           
+            // console.log({ otp, expires })
 
             const url = ` OTP: ${otp} `; //url for email
 
             // it's help send mail
             // sendMail.sendVerificationMail(email, url, "Verify your email address");
 
-
-
             // it's help save data in db
             const newUser = new LoginModel({
-                username,
+                Name,
                 email,
                 password: passwordHash,
                 cpassword: cpasswordHash,
@@ -74,25 +69,20 @@ class Login {
                 expires,
             });
 
-            console.log({ "ok": newUser });
             //STORE YOUR LOGIN DATA IN DB 
             await newUser.save();
+            console.log({ newUser });
 
             const saved_user = await LoginModel.findOne({ email: email })
-
             // Genwrate JWT Token
             const token = jwt.sign({ userID: saved_user._id },
-                "nvnfjvfvfvfvbbbfvf", { expiresIn: '1d' }
+                'checkthisissecretkey', { expiresIn: '1d' }
             )
 
-            res.status(200).send({
-                status: "panddig",
-                msg: "Register Success! Please activate your email to start.",
-                token:token
-            });
+            res.send({msg: "Register Success! Please activate your email to start."});
 
         } catch (err) {
-             res.status(200).send({ msg: err.message });
+            return res.send({ msg:err });
         }
     }
 
@@ -116,16 +106,14 @@ class Login {
             })
         }
 
-        // Shubham
         console.log("otp", otp);
 
         if (otp == isValid.otp) {
 
             // Genwrate JWT Token
             const token = jwt.sign({ userID: isValid._id },
-                "hampagalnhihebhaiya", { expiresIn: '1d' })
+                'checkthisissecretkey', { expiresIn: '1d' })
 
-            res.status(200).send({ msg: "Otp is Corect", "token": token, "status": "success", });
 
             // find and update is varified (true)
             const verifyAccount = LoginModel.findOneAndUpdate({ email: email }, { $set: { isVerifyed: true } })
@@ -135,6 +123,7 @@ class Login {
                     console.log(err);
                 })
 
+            res.send({ msg: "Otp is Corect", token: token, data: isValid });
 
         } else {
             res.send({ msg: "Otp is incorect" });
@@ -157,6 +146,9 @@ class Login {
 
             //  CHECK EMAIL IS VALID OR NOT
             if (!user)
+                return res.send({ msg: "This email in not Valid." });
+
+            if (user.isVerifyed == false)
                 return res.send({ msg: "This email in not Verified." });
 
             const isMatch = await bcrypt.compare(password, user.password);
@@ -167,17 +159,17 @@ class Login {
 
             // Genwrate JWT Token
             const token = jwt.sign({ userID: user._id, email: email },
-                'hampagalnhihebhaiya', { expiresIn: '1d' })
+                'checkthisissecretkey', { expiresIn: '1d' })
 
 
-            res.status(200).send({ msg: "Login success!", "token": token, "status": "success", });
+            res.send({ msg: "Login success!", "token": token, "status": "success", data: user });
 
 
             console.log(`Login Success!`);
 
 
         } catch (err) {
-            return res.status(500).send({ msg: err.message });
+            return res.send({ msg: err.message });
         }
     }
 
@@ -201,7 +193,6 @@ class Login {
 
 
 }
-
 // // email validation
 function validateEmail(email) {
     const re =

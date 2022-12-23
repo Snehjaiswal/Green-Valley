@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Header />
-     
+      
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
         <Route path='/cart' element={<CartProvider>   

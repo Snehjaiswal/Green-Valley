@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import Conformalert from '../ConformAlert';
+
 
 function Login() {
     const navigate = useNavigate();
@@ -11,16 +13,23 @@ function Login() {
     const [password, setpassword] = useState("");
     const [cpassword, setcPassword] = useState('')
 
+    const [showAlert, setShowAlert] = useState(false);
+    const [textAlert, setTextAlert] = useState("");
+    const [alertColor, setAlertColor] = useState("");
+
+    const onAlertClose = e => {
+        setShowAlert(false);
+    }
 
 
     const Signup = () => {
-      
+
         var config = {
             method: 'post',
             url: 'http://localhost:7070/api/login/signup',
 
             data: {
-                "username": name,
+                "Name": name,
                 "email": email,
                 "password": password,
                 "cpassword": cpassword
@@ -28,17 +37,19 @@ function Login() {
         };
         axios(config)
             .then(function (response) {
-                console.log("response",response.data.status);
+                console.log("response", response.data.msg);
+             
                 localStorage.setItem('userEmail', email)
-                if(response.data.status == 'panddig'){
+                if (response.data.msg == 'Register Success! Please activate your email to start.') {
                     navigate('/Otpverify');
-                }else{
-                    alert(response.data.status)
+                } else {
+                      alert(response.data.msg)
+                    
                 }
-                
+
             })
             .catch(function (error) {
-                console.log(error);
+                alert(error)
             });
 
     }
@@ -47,12 +58,12 @@ function Login() {
 
 
     const SignIn = () => {
-     
+
         var config = {
             method: 'post',
             url: 'http://localhost:7070/api/login/signin',
 
-            data: { 
+            data: {
                 "email": email,
                 "password": password
             }
@@ -60,15 +71,19 @@ function Login() {
         axios(config)
             .then(function (response) {
                 console.log(response.data);
-                if(response.data.status == 200){
+                if (response.data.msg == 'Login success!') {
+                    localStorage.setItem('userEmail', email)
+                    localStorage.setItem('roleid',response.data.data.roleId)
+                    localStorage.setItem('userid',response.data.data._id)
                     navigate('/userprofile');
-                }else{
-                    alert(response.data.status)
-                    
+                } else {
+                    alert(response.data.msg)
+
                 }
             })
             .catch(function (error) {
-                console.log(error);
+                alert(error)
+
             });
 
     }
@@ -177,6 +192,15 @@ function Login() {
                     </div>
                 </div>
             </div>
+
+            {showAlert &&
+                <Conformalert
+                    hideAlert={onAlertClose}
+                    showAlert={showAlert}
+                    message={textAlert}
+                    alertColor={alertColor}
+                />
+            }
         </div>
 
 
