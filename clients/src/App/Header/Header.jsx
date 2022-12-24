@@ -8,7 +8,7 @@ function Header() {
   const {
 
     cartTotal,
-  
+
   } = useCart();
 
   const navigate = useNavigate();
@@ -38,28 +38,31 @@ function Header() {
     navigate('/cart')
   }
 
-const Login = ()=>{
-  navigate('/login')
-}
-
-  const profilePage = () => {
-    if (roleid == 1) {
-      navigate('/userprofile');
-    } else if (roleid == 2) {
-      console.log("dsbcudv");
-      navigate('/sellerProfile');
-    } else if (roleid == 3) {
-      navigate('/adminprofile');
-    } else {
-      navigate('/login');
-    }
+  const Login = () => {
+    navigate('/login')
   }
 
-const logoutuser = ()=>{
-  console.log("logout");
-  localStorage.clear();
-  navigate('/login');
-}
+  // const profilePage = () => {
+  //   if (roleid == 1) {
+  //     navigate('/userprofile');
+  //   } else if (roleid == 2) {
+  //     console.log("dsbcudv");
+  //     navigate('/sellerProfile');
+  //   } else if (roleid == 3) {
+  //     navigate('/adminprofile');
+  //   } else {
+  //     navigate('/login');
+  //   }
+  // }
+
+  const logoutuser = () => {
+    console.log("logout");
+    localStorage.clear();
+    navigate('/login');
+  }
+  const Admindashboard= ()=>{
+    navigate('/admin/dashboard');
+  }
 
 
   // Local Storeage 
@@ -70,7 +73,7 @@ const logoutuser = ()=>{
   }
 
 
- 
+
 
   return (
     <>
@@ -118,32 +121,49 @@ const logoutuser = ()=>{
               <li className="nav-item">
                 <a className="nav-link text-dark" onClick={Cart} ><i className="fa-solid fa-cart-shopping"></i>[1]</a>
 
-              </li>   <li className="nav-item">
+              </li>  
+              
+              {/* Notification */}
+               <li className="nav-item">
                 <a className="nav-link text-dark"  ><i className="fa-sharp fa-solid fa-bell"></i></a>
               </li>
+
+              {/* Login */}
               <li className="nav-item dropdown">
-                {!roleid ? <a className="nav-link text-dark" onClick={Login} >Login</a> : <>
-                  <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><i className="fa-solid fa-user"></i></a>
-                  <div id="myDropdown" className="dropdown-content" >
-                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
-                      <li>
-                        <a href="#home p-0" style={{ paddingTop: '8px' }}><img
-                          className="profile-user-img img-responsive img-circle ms-5  rounded-circle"
+                {!roleid ? <a className="nav-link text-dark" onClick={Login} >Login</a> : roleid == 2 || roleid == 3 ? <>
+                  <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
+                          className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
                           alt="User profile picture"
-                          style={{ width: "60px", border: "3px solid black", textAlign: "center", justifyContent: "center" }} />
-                        </a>
-                      </li>
-                      <hr style={{ border: "1px solid black", paddingLeft: "0", paddingRight: "0" }} />
-                      <li>  <a onClick={profilePage}>Dashboard</a></li>
+                          style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
+                          
+                  <div id="myDropdown" className="dropdown-content" >
+                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                    
+                      <li>  <a onClick={Admindashboard}>Dashboard</a></li>
+                      <li>  <a href="setting">setting</a></li>
+                      <li>  <a href="about">About us</a></li>
+                      <li>  <a onClick={logoutuser}>Logout     <i class="fa fa-sign-out pull-right"/> </a></li>
+                    </ul>
+                  </div>
+                </> : <>
+                  <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
+                          className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
+                          src="http://app.smartalgo.in/assets/dist/img/avatar.png"
+                          alt="User profile picture"
+                          style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
+                  <div id="myDropdown" className="dropdown-content" >
+                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                    
+                      <li>  <a onClick={Admindashboard}>Profile</a></li>
                       <li>  <a href="setting">setting</a></li>
                       <li>  <a href="about">About us</a></li>
                       <li>  <a onClick={logoutuser}>Logout</a></li>
                     </ul>
-
-
                   </div>
-                </>} </li>
+                </>
+
+                } </li>
 
 
             </ul>
