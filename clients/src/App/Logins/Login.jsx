@@ -38,13 +38,13 @@ function Login() {
         axios(config)
             .then(function (response) {
                 console.log("response", response.data.msg);
-             
+
                 localStorage.setItem('userEmail', email)
                 if (response.data.msg == 'Register Success! Please activate your email to start.') {
                     navigate('/Otpverify');
                 } else {
-                      alert(response.data.msg)
-                    
+                    alert(response.data.msg)
+
                 }
 
             })
@@ -73,12 +73,18 @@ function Login() {
                 console.log(response.data);
                 if (response.data.msg == 'Login success!') {
                     localStorage.setItem('userEmail', email)
-                    localStorage.setItem('roleid',response.data.data.roleId)
-                    localStorage.setItem('userid',response.data.data._id)
-                    navigate('/userprofile');
-                } else {
-                    alert(response.data.msg)
+                    localStorage.setItem('roleid', response.data.data.roleId)
+                    localStorage.setItem('userid', response.data.data._id)
 
+                    if (response.data.data.roleId == 1) {
+                        navigate('/userprofile');
+                    } else if (response.data.data.roleId == 3) {
+
+                        navigate('/admin/dashboard');
+                    } else {
+                        navigate('/userprofile');
+
+                    }
                 }
             })
             .catch(function (error) {
