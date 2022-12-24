@@ -1,6 +1,7 @@
 import React from "react";
 import { useCart } from "react-use-cart";
-
+import Modal2 from "./Modal2";
+import Modal1 from "./Moadl";
 const ItemCard = (props) => {
   const { addItem } = useCart();
 
@@ -17,8 +18,8 @@ const ItemCard = (props) => {
             className="btn btn-success" style={{paddingBottom:'30px',height:'5px',width:'100%'}}
             onClick={() => addItem(props.item)}
           >
-            Add to Cart
-          </button>
+          <Modal2/>
+            </button>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Header from "./App/Header/Header";
 import Home from './App/Home/Home'
 import Footer from "./App/Footer/Footer";
 import App1 from './App/Cards/App'
-import { Route, Routes,useLocation  } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Cart from "./App/Cards/Cart";
 import { CartProvider } from "react-use-cart";
 // import Shop from "./App/Shop/Shop";
@@ -17,20 +17,30 @@ import SellerProfile from "./App/Seller/Profile/SellerProfile";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
 import Login from "./App/Logins/Login";
-import AdminDashboard from './App/Admin/Dashboards/Dashboard'
+import Popup from "./App/Cards/Popup";
+import Modal1 from "./App/Cards/Moadl";
+import Modal2 from "./App/Cards/Modal2";
+
 
 function App() {
-  const location =useLocation()
-  console.log("location",location.pathname);
+  const location = useLocation()
+  console.log("location", location.pathname);
 
   return (
     <>
-    
+
       {/* */}
-      {location.pathname.includes("/admin") ? "" :  <Header /> }
+      {location.pathname.includes("/admin") ? "" : <Header />}
 
       <Routes>
-        <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
+        <Route exact path='/' element={
+          <>
+            < Home />
+            <App1 />
+          </>
+        }>
+
+        </Route>
         <Route path='/cart' element={<CartProvider>
           <Cart />
         </CartProvider>}></Route>
@@ -44,12 +54,16 @@ function App() {
         <Route path="/profilePage" element={<Profiepage />} />
         <Route path="/otpverify" element={<Otpverify />} />
         <Route path="/login" element={<Login />} />
-
-
-        {/* Admin Router */}
+        <Route path="/userprofile" element={<Userprofile />} />
         <Route path="/adminprofile" element={<Adminprofile />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/sellerProfile" element={<SellerProfile />} />
 
+        <Route path="/otpverify" element={<Otpverify />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/popup" element={<Popup />} />
+
+        <Route path="/modal" element={<Modal1 />} />
+        <Route path="modal2" element={<Modal2 />} />
 
 
 
@@ -62,8 +76,8 @@ function App() {
 
 
       </Routes>
-       <Footer />
-       
+      <Footer />
+
     </>
   );
 }
