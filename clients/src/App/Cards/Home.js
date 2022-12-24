@@ -12,7 +12,7 @@ const Home = () => {
         <h1 className='GrocerHeading'>Green Vally</h1>
       </div> */}
       <section className="py-4 container">
-        <div className="row justify-content-center">
+        <div className="row justify-content-center orductsCard">
           {data.productData.map((item, index) => {
             return (
               <ItemCard

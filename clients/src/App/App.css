@@ -1610,7 +1610,7 @@ button .my-btn {
 }
 
 
-*/ section#shiping {
+section#shiping {
     padding: 50px;
     background: white;
     color: white;
@@ -1706,6 +1706,12 @@ button .my-btn {
 
 
 /* -------------CARDS CSS----------------------- */
+
+.orductsCard{
+    overflow: hidden;
+    z-index: -1;
+}
+
 
 
 /* -------------CONTACT CSS----------------------- */
@@ -1938,6 +1944,8 @@ button .my-btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    overflow: hidden;
+    z-index: -1;
 }
 
 #summer-collection .container .sc-content {
@@ -1956,6 +1964,8 @@ button .my-btn {
     line-height: 6rem;
     text-transform: uppercase;
     margin-bottom: 2vw;
+    overflow: hidden;
+    z-index: -1;
 }
 
 #summer-collection .container .sc-content p.description {
