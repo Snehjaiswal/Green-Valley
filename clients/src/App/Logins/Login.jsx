@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-import Conformalert from '../ConformAlert';
+// import Conformalert from '../ConformAlert';
 
 
 function Login() {
@@ -13,13 +13,13 @@ function Login() {
     const [password, setpassword] = useState("");
     const [cpassword, setcPassword] = useState('')
 
-    const [showAlert, setShowAlert] = useState(false);
-    const [textAlert, setTextAlert] = useState("");
-    const [alertColor, setAlertColor] = useState("");
+    // const [showAlert, setShowAlert] = useState(false);
+    // const [textAlert, setTextAlert] = useState("");
+    // const [alertColor, setAlertColor] = useState("");
 
-    const onAlertClose = e => {
-        setShowAlert(false);
-    }
+    // const onAlertClose = e => {
+    //     setShowAlert(false);
+    // }
 
 
     const Signup = () => {
@@ -40,7 +40,7 @@ function Login() {
                 console.log("response", response.data.msg);
 
                 localStorage.setItem('userEmail', email)
-                if (response.data.msg == 'Register Success! Please activate your email to start.') {
+                if (response.data.msg === 'Register Success! Please activate your email to start.') {
                     navigate('/Otpverify');
                 } else {
                     alert(response.data.msg)
@@ -71,18 +71,20 @@ function Login() {
         axios(config)
             .then(function (response) {
                 console.log(response.data);
-                if (response.data.msg == 'Login success!') {
+                if (response.data.msg === 'Login success!') {
                     localStorage.setItem('userEmail', email)
                     localStorage.setItem('roleid', response.data.data.roleId)
                     localStorage.setItem('userid', response.data.data._id)
 
-                    if (response.data.data.roleId == 1) {
-                        navigate('/userprofile');
-                    } else if (response.data.data.roleId == 3) {
+                    if (response.data.data.roleId === 1) {
+                        navigate('/home');
+                    } else if (response.data.data.roleId === 2) {
 
-                        navigate('/admin/dashboard');
+                        navigate('/home');
+                    } else if (response.data.data.roleId === 3) {
+                        navigate('/home');
                     } else {
-                        navigate('/userprofile');
+                        navigate('/home');
 
                     }
                 }
@@ -199,14 +201,7 @@ function Login() {
                 </div>
             </div>
 
-            {showAlert &&
-                <Conformalert
-                    hideAlert={onAlertClose}
-                    showAlert={showAlert}
-                    message={textAlert}
-                    alertColor={alertColor}
-                />
-            }
+
         </div>
 
 

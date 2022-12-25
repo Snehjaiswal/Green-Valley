@@ -7,18 +7,19 @@ const ItemCard = (props) => {
   return (
     <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4">
       <div className="card p-0 overflow-hidden h-100 shadow">
-        <img src={props.img} className="card-img-top img-fluid" alt="" />
+        <img src={props.img} className="card-img-top cardImg" alt="" style={{ }} />
         <div className="card-body text-center">
           <h5 className="card-title">{props.title}</h5>
           <h4 className="card-text">₹ {props.price}</h4>
           <p className="card-text">{props.desc}</p>
-
+          <div class="mobileShow">
           <button
             className="btn btn-success" style={{paddingBottom:'30px',height:'5px',width:'100%'}}
             onClick={() => addItem(props.item)}
           >
             Add to Cart
           </button>
+          </div>
         </div>
       </div>
     </div>

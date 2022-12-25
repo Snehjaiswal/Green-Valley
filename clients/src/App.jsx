@@ -6,14 +6,14 @@ import App1 from './App/Cards/App'
 import { Route, Routes,useLocation  } from 'react-router-dom';
 import Cart from "./App/Cards/Cart";
 import { CartProvider } from "react-use-cart";
-// import Shop from "./App/Shop/Shop";
+
 import Blogs from "./App/Blogs/Blogs";
 import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
 import Grocerhome from './App/Grocers/Grocerhome'
 import Profiepage from "./App/Profile-Page/Userprofile";
 import Adminprofile from "./App/Admin/Profile/Adminprofile";
-import SellerProfile from "./App/Seller/Profile/SellerProfile";
+import Sellerdasboard from "./App/Seller/Dashboard/Sellerdashboard";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
 import Login from "./App/Logins/Login";
@@ -21,7 +21,7 @@ import AdminDashboard from './App/Admin/Dashboards/Dashboard'
 
 function App() {
   const location =useLocation()
-  console.log("location",location.pathname);
+  console.log("location",location);
 
   return (
     <>
@@ -52,9 +52,8 @@ function App() {
 
 
 
-
         {/* Seller Router */}
-        <Route path="/sellerProfile" element={<SellerProfile />} />
+        <Route path="/client/dashboard" element={<Sellerdasboard />} />
 
 
         {/* User Router */}
@@ -62,7 +61,7 @@ function App() {
 
 
       </Routes>
-       <Footer />
+       {/* <Footer /> */}
        
     </>
   );

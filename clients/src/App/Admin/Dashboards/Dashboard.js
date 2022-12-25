@@ -47,22 +47,22 @@ function Dashboard() {
                                         <i className="bi bi-house" /> Dashboard
                                     </a>
                                 </li>
-                                <li className="nav-item">
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         <i className="bi bi-bar-chart" /> Analitycs
                                     </a>
-                                </li>
-                                <li className="nav-item">
+                                </li> */}
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         <i className="bi bi-chat" /> Messages
                                         <span className="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
                                     </a>
-                                </li>
-                                <li className="nav-item">
+                                </li> */}
+                                {/* <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         <i className="bi bi-bookmarks" /> Collections
                                     </a>
-                                </li>
+                                </li> */}
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">
                                         <i className="bi bi-people" /> Users
@@ -72,7 +72,7 @@ function Dashboard() {
                             {/* Divider */}
                             <hr className="navbar-divider my-5 opacity-20" />
                             {/* Navigation */}
-                            <ul className="navbar-nav mb-md-4">
+                            {/* <ul className="navbar-nav mb-md-4">
                                 <li>
                                     <div className="nav-link text-xs font-semibold text-uppercase text-muted ls-wide" href="#">
                                         Contacts
@@ -142,9 +142,9 @@ function Dashboard() {
                                         </div>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> */}
                             {/* Push content down */}
-                            <div className="mt-auto" />
+                            <div className="mt-auto" />  
                             {/* User (md) */}
                             <ul className="navbar-nav">
                                 <li className="nav-item">

@@ -4,12 +4,9 @@ import { useCart } from "react-use-cart";
 
 
 
+
 function Header() {
-  const {
-
-    cartTotal,
-
-  } = useCart();
+  const {cartTotal} = useCart();
 
   const navigate = useNavigate();
   const roleid = localStorage.getItem('roleid')
@@ -40,6 +37,10 @@ function Header() {
 
   const Login = () => {
     navigate('/login')
+  }
+
+  const Sellerdashboard = ()=>{
+    navigate('/client/dashboard')
   }
 
   // const profilePage = () => {
@@ -80,7 +81,7 @@ function Header() {
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand " href="#">GreenValley</a>
+          <h3 className="navbar-brand" href="#" style={{"fontSize":"20px"}}>GreenValley</h3>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -130,7 +131,8 @@ function Header() {
 
               {/* Login */}
               <li className="nav-item dropdown">
-                {!roleid ? <a className="nav-link text-dark" onClick={Login} >Login</a> : roleid == 2 || roleid == 3 ? <>
+                {!roleid ? <a className="nav-link text-dark" onClick={Login} >Login</a> : roleid == 3 ?
+                 <>
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
                           className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
@@ -146,7 +148,31 @@ function Header() {
                       <li>  <a onClick={logoutuser}>Logout     <i class="fa fa-sign-out pull-right"/> </a></li>
                     </ul>
                   </div>
-                </> : <>
+                </>
+                 :roleid == 2 ? 
+                 <>
+                   <>
+                  <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
+                          className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
+                          src="http://app.smartalgo.in/assets/dist/img/avatar.png"
+                          alt="User profile picture"
+                          style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
+                          
+                  <div id="myDropdown" className="dropdown-content" >
+                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                    
+                      <li>  <a onClick={Sellerdashboard}>Dashboard</a></li>
+                      <li>  <a href="setting">setting</a></li>
+                      <li>  <a href="about">About us</a></li>
+                      <li>  <a onClick={logoutuser}>Logout     <i class="fa fa-sign-out pull-right"/> </a></li>
+                    </ul>
+                  </div>
+                </>
+                
+                
+                
+                
+                </>: <>
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
                           className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
@@ -155,10 +181,11 @@ function Header() {
                   <div id="myDropdown" className="dropdown-content" >
                     <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
                     
-                      <li>  <a onClick={Admindashboard}>Profile</a></li>
+                      <li>  <a> Profile</a></li>
                       <li>  <a href="setting">setting</a></li>
                       <li>  <a href="about">About us</a></li>
-                      <li>  <a onClick={logoutuser}>Logout</a></li>
+                      <li>  <a onClick={logoutuser}>Logout     <i class="fa fa-sign-out pull-right"/> </a></li>
+
                     </ul>
                   </div>
                 </>

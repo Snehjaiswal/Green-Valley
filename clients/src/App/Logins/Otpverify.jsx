@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate,useLocation  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 import axios from 'axios'
 
 function Otpverify() {
@@ -19,10 +19,10 @@ function Otpverify() {
     let index = parseInt(current.classList[1].split("__")[2])
     current.value = event.key
 
-    if (event.keyCode == 8 && index > 1) {
+    if (event.keyCode === 8 && index > 1) {
       current.previousElementSibling.focus()
     }
-    if (index < 6 && mykey.indexOf("" + event.key + "") != -1) {
+    if (index < 6 && mykey.indexOf("" + event.key + "") !== -1) {
       var next = current.nextElementSibling;
       next.focus()
     }
@@ -31,7 +31,7 @@ function Otpverify() {
     for (let { value } of otp_inputs) {
       _finalKey += value
     }
-    if (_finalKey.length == 6) {
+    if (_finalKey.length === 6) {
       // document.querySelector("#_otp").classList.replace("_notok", "_ok")
       setotp(_finalKey)
       console.log("okokoko",_finalKey);
@@ -71,7 +71,7 @@ const OtpVerify =()=>{
 
   return (
     <>
-      <form action="javascript: void(0)" className="otp-form" name="otp-form">
+      <form action="javascript" className="otp-form" name="otp-form">
         <div className="title">
           <h3>OTP VERIFICATION</h3>
           <p className="info">An otp has been sent to ***{email.slice(-3)}</p>
