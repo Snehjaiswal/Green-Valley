@@ -33,33 +33,31 @@ function Dashboard() {
                                     {/* Actions */}
                                     <div className="col-sm-6 col-12 text-sm-end">
                                         <div className="mx-n1">
-                                            <a href="#" className="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                            {/* <a href="#" className="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
                                                 <span className=" pe-2">
                                                     <i className="bi bi-pencil" />
                                                 </span>
                                                 <span>Edit</span>
-                                            </a>
+                                            </a> */}
                                             <a href="#" className="btn d-inline-flex btn-sm btn-primary mx-1">
                                                 <span className=" pe-2">
                                                     <i className="bi bi-plus" />
                                                 </span>
-                                                <span>Create</span>
+                                                <span>Add Client</span>
                                             </a>
+                                            <a href="#" className="btn">
+                                                <span className=" pe-2">
+                                                <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" className="avatar avatar-sm rounded-circle me-2" />
+                                                 
+                                                </span>
+                                              
+                                            </a> 
+                                           
+                                          
                                         </div>
                                     </div>
                                 </div><br />
-                                {/* Nav */}
-                                {/* <ul className="nav nav-tabs mt-4 overflow-x border-0">
-                                    <li className="nav-item ">
-                                        <a href="#" className="nav-link active">All files</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a href="#" className="nav-link font-regular">Shared</a>
-                                    </li>
-                                    <li className="nav-item">
-                                        <a href="#" className="nav-link font-regular">File requests</a>
-                                    </li>
-                                </ul> */}
+                              
                             </div>
                         </div>
                     </header>
