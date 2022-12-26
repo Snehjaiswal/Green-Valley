@@ -5,10 +5,14 @@ import { useNavigate } from 'react-router-dom';
 function Sidebar() {
     const navigate = useNavigate();
     const sellerslist = () => {
-        navigate('/sellerslist')
+        // alert("okk")
+        navigate('/admin/sellerslist')
     }
     const userslist = () => {
-        navigate('/userslist')
+        navigate('/admin/userslist')
+    }
+    const home = () => {
+        navigate('/admin/home')
     }
   return (
    <>
@@ -53,17 +57,17 @@ function Sidebar() {
                                     </a>
                                 </li> */}
                                 <li className="nav-item">
-                                    <a className="nav-link">
+                                    <a className="nav-link" onClick={home}>
                                         Home
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={(e) => sellerslist}>
+                                    <a className="nav-link" onClick={sellerslist}>
                                         Sellers
                                     </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={(e) => userslist}>
+                                    <a className="nav-link" onClick={ userslist}>
                                         Users
                                     </a>
                                 </li>
