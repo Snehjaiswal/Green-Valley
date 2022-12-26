@@ -12,20 +12,20 @@ import Contact from "./App/Contact/Contact";
 import Grocer from "./App/Grocers/Grocer";
 import Grocerhome from './App/Grocers/Grocerhome'
 import Profiepage from "./App/Profile-Page/Userprofile";
-import Adminprofile from "./App/Admin/Profile/Adminprofile";
-import Sellerdasboard from "./App/Seller/Dashboard/Sellerdashboard";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
 import Login from "./App/Logins/Login";
-import AdminDashboard from './App/Admin/Dashboards/Dashboard'
+
+import Admin from './App/Admin/Adminapp'
+import Client from './App/Clients/Clientrouts'
 
 function App() {
   const location =useLocation()
   console.log("location",location);
-
+  const roleid = localStorage.getItem('roleid')
   return (
     <>
-    
+   
       {/* */}
       {location.pathname.includes("/admin") ? "" :  <Header /> }
 
@@ -47,13 +47,12 @@ function App() {
 
 
         {/* Admin Router */}
-        <Route path="/adminprofile" element={<Adminprofile />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-
+        <Route path="/admin/*" element={roleid == "3"? <Admin /> : <Login />} />
 
 
         {/* Seller Router */}
-        <Route path="/client/dashboard" element={<Sellerdasboard />} />
+      
+        <Route path="/client/*" element={roleid == "2"? <Client /> : <Login />} />
 
 
         {/* User Router */}

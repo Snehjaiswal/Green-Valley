@@ -80,8 +80,8 @@ function Header() {
     <>
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <h3 className="navbar-brand" href="#" style={{"fontSize":"20px"}}>GreenValley</h3>
+        <div className="container-fluid" style={{"paddingRight":"0"}}>
+          <h3 className="navbar-brand"  style={{"fontSize":"20px",}}> <b>GreenValley</b> </h3>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon" />
           </button>
@@ -139,8 +139,8 @@ function Header() {
                           alt="User profile picture"
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                           
-                  <div id="myDropdown" className="dropdown-content" >
-                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                  <div id="myDropdown" className="dropdown-content" style={{ paddingLeft: "1rem", }}>
+                    <ul style={{ paddingLeft: "1rem",  }}>
                     
                       <li>  <a onClick={Admindashboard}>Dashboard</a></li>
                       <li>  <a href="setting">setting</a></li>
@@ -159,7 +159,7 @@ function Header() {
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                           
                   <div id="myDropdown" className="dropdown-content" >
-                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                    <ul style={{ paddingLeft: "1rem",  }}>
                     
                       <li>  <a onClick={Sellerdashboard}>Dashboard</a></li>
                       <li>  <a href="setting">setting</a></li>
@@ -179,7 +179,7 @@ function Header() {
                           alt="User profile picture"
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                   <div id="myDropdown" className="dropdown-content" >
-                    <ul style={{ paddingLeft: "0.5rem", textDecoration: "none" }}>
+                    <ul style={{ paddingLeft: "0.2rem",  }}>
                     
                       <li>  <a> Profile</a></li>
                       <li>  <a href="setting">setting</a></li>
