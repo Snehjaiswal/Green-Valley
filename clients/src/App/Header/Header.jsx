@@ -62,7 +62,7 @@ function Header() {
     navigate('/login');
   }
   const Admindashboard= ()=>{
-    navigate('/admin/dashboard');
+    navigate('/admin/home');
   }
 
 

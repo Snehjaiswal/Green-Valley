@@ -71,6 +71,17 @@ function Sidebar() {
                                         Users
                                     </a>
                                 </li>
+                            
+                                <li className="nav-item">
+                                    <a className="nav-link" onClick={ userslist}>
+                                        Products
+                                    </a>
+                                </li>   
+                                <li className="nav-item">
+                                    <a className="nav-link" onClick={ userslist}>
+                                        Setting
+                                    </a>
+                                </li>
                                 <li className="nav-item">
                                     <a className="nav-link">
                                         Logout
