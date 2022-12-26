@@ -11,8 +11,10 @@ function Adminprofile() {
       navigate('/userslist')
   }
   return (<>
+     <div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
 <Sidebar/>
 <h1 className="text-center">Admin Profile</h1>
+</div>
   </>
   )
 }
