@@ -136,7 +136,7 @@ function Header() {
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
                           className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
-                          alt="User profile picture"
+                          alt="profile "
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                           
                   <div id="myDropdown" className="dropdown-content" style={{ paddingLeft: "1rem", }}>
@@ -155,7 +155,7 @@ function Header() {
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
                           className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
-                          alt="User profile picture"
+                          alt="profile "
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                           
                   <div id="myDropdown" className="dropdown-content" >
@@ -176,7 +176,7 @@ function Header() {
                   <a className="nav-link text-dark ali dropbtn" onClick={Profilefunc} ><img
                           className="profile-user-img img-responsive img-circle ms-2  rounded-circle"
                           src="http://app.smartalgo.in/assets/dist/img/avatar.png"
-                          alt="User profile picture"
+                          alt="profile "
                           style={{ width: "40px", textAlign: "center", justifyContent: "center" }} /></a>
                   <div id="myDropdown" className="dropdown-content" >
                     <ul style={{ paddingLeft: "0.2rem",  }}>

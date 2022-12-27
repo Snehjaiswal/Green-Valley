@@ -28,7 +28,7 @@ function Dashboard() {
                                 <div className="row align-items-center">
                                     <div className="col-sm-6 col-12 mb-4 mb-sm-0">
                                         {/* Title */}
-                                        <h1 className="h2 mb-0 ls-tight">Application</h1>
+                                        <h1 className="h2 mb-0 ls-tight">Home</h1>
                                     </div>
                                     {/* Actions */}
                                     <div className="col-sm-6 col-12 text-sm-end">

@@ -4,7 +4,9 @@ import AdminDashboard from '../Admin/Dashboards/Dashboard'
 import Adminprofile from './Profile/Adminprofile'
 import Adsellers from './Sellers/Adsellers';
 import Adusers from './Users/Adusers';
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
+import Adproducts from './Products/Adproducts';  
+
 
 function Adminapp() {
     return (
@@ -16,6 +18,8 @@ function Adminapp() {
                 <Route path="/profile" element={<Adminprofile />} />
                 <Route path="/sellerslist" element={<Adsellers />} />
                 <Route path="/userslist" element={<Adusers />} />
+                <Route path="/products" element={<Adproducts />} />
+
 
             </Routes>
 

@@ -3,7 +3,7 @@ import Header from "./App/Header/Header";
 import Home from './App/Home/Home'
 import Footer from "./App/Footer/Footer";
 import App1 from './App/Cards/App'
-import { Route, Routes,useLocation  } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Cart from "./App/Cards/Cart";
 import { CartProvider } from "react-use-cart";
 
@@ -20,14 +20,14 @@ import Admin from './App/Admin/Adminapp'
 import Client from './App/Clients/Clientrouts'
 
 function App() {
-  const location =useLocation()
-  console.log("location",location);
+  const location = useLocation()
+  console.log("location", location);
   const roleid = localStorage.getItem('roleid')
   return (
     <>
-   
+
       {/* */}
-      {location.pathname.includes("/admin") ? "" :  <Header /> }
+      {location.pathname.includes("/admin") ? "" : <Header />}
 
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
@@ -43,16 +43,17 @@ function App() {
         <Route path="/grocerhome" element={<Grocerhome />} />
         <Route path="/profilePage" element={<Profiepage />} />
         <Route path="/otpverify" element={<Otpverify />} />
-        <Route path="/login" element={<Login />} />
+        {!roleid ? <Route path="/login" element={<Login />} /> : ""}
+
 
 
         {/* Admin Router */}
-        <Route path="/admin/*" element={roleid == "3"? <Admin /> : <Login />} />
+        <Route path="/admin/*" element={roleid == "3" ? <Admin /> : <Login />} />
 
 
         {/* Seller Router */}
-      
-        <Route path="/client/*" element={roleid == "2"? <Client /> : <Login />} />
+
+        <Route path="/client/*" element={roleid == "2" ? <Client /> : <Login />} />
 
 
         {/* User Router */}
@@ -60,8 +61,8 @@ function App() {
 
 
       </Routes>
-       {/* <Footer /> */}
-       
+      {/* <Footer /> */}
+
     </>
   );
 }

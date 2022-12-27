@@ -29,7 +29,7 @@ function Home3() {
 
 
       <section id="head">
-        <div className="container">
+        <div className="container" style={{"paddingTop":"20px"}}>
           <div className="row">
             <div className="col-md-6">
               <img
@@ -113,7 +113,7 @@ function Home3() {
               <h2>featured collection</h2>
               <hr />
               <div className="c-2-image-holder"> <img className="left" src={img4} alt="okk" /><img className="right" src={img6} alt="okk" /></div>
-              <p className="button">view all collections</p>
+              {/* <p className="button">view all collections</p> */}
             </div>
           </div>
         </section>

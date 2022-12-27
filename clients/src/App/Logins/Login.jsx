@@ -100,7 +100,7 @@ function Login() {
         <><div className='loginbody'>
             <div className={first ? `${first} login_container` : "login_container"} id="login_container">
                 <div className="form-login_container  sign-up-login_container">
-                    <form action="">
+                    <div  className='loginform'  action="">
                         <div className="header">Sign Up</div>
                         <div className="social__media__login_container">
                             <a href="https://codepen.io/Rittenhouse" target="_blank" className="social codepen">
@@ -114,8 +114,8 @@ function Login() {
                             </a>
                         </div>
                         <span className="under__social">
-                            <a href="#" className="link signin-link">or use your email for registration
-                            </a>
+                            <span className="link signin-link">or use your email for registration
+                            </span>
                         </span>
                         <div className="button-input-group">
                             <div className="group input-group">
@@ -137,10 +137,10 @@ function Login() {
                                 <button className="signup-btn" onClick={Signup}  >Sign Up</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div className="form-login_container  sign-in-login_container">
-                    <form >
+                    <div className='loginform' >
                         <div className="header" >Sign In</div>
                         <div className="social__media__login_container">
                             <a href="https://codepen.io/Rittenhouse" target="_blank" className="social codepen">
@@ -154,26 +154,26 @@ function Login() {
                             </a>
                         </div>
                         <span className="under__social">
-                            <a href="#" className="link signup-link">or use your account</a>
+                            <span  className="link signup-link">or use your account</span>
                         </span>
                         <div className="button-input-group">
                             <div className="group input-group">
-                                <input type="email" placeholder="Email" onChange={(e) => { setemail(e.target.value) }} required />
+                                <input type="email" placeholder="Email" onChange={(e) => { setemail(e.target.value) }}  />
                             </div>
                             <div className="group input-group">
-                                <input type="password" placeholder="Password" onChange={(e) => { setpassword(e.target.value) }} required pattern=".{8,}" />
+                                <input type="password" placeholder="Password" onChange={(e) => { setpassword(e.target.value) }}  />
                             </div>
                             <div className="alert-text signup__alert">
                                 {/* <span className="help__text">At least 8 character</span> */}
                             </div>
                             <div className="form-link forgot">
-                                <a href="#" className="login-link">Forgot your password?</a>
+                                <a className="login-link">Forgot your password?</a>
                             </div>
                             <div className="group button-group">
                                 <button className="signin-btn" onClick={SignIn} >Sign in</button>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
                 <div className="overlay-login_container">
                     <div className="overlay">

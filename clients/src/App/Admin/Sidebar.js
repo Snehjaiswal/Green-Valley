@@ -14,6 +14,11 @@ function Sidebar() {
     const home = () => {
         navigate('/admin/home')
     }
+
+const Adproducts =()=>{
+    navigate('/admin/products')
+}
+
   return (
    <>
         <nav className="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg" id="navbarVertical">
@@ -73,7 +78,7 @@ function Sidebar() {
                                 </li>
                             
                                 <li className="nav-item">
-                                    <a className="nav-link" onClick={ userslist}>
+                                    <a className="nav-link" onClick={ Adproducts}>
                                         Products
                                     </a>
                                 </li>   
