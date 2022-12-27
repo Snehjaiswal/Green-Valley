@@ -74,8 +74,24 @@ function Header() {
   }
 
 
-
-
+const upload= async (e)=>{
+console.log(e.target.files,'..........');
+const file=e.target.files[0]
+const base =await base64(file)
+console.log('.............................',base);
+}
+const base64=(file)=>{
+return new Promise((resolve,reject)=>{
+const filereader=new FileReader()
+filereader.readAsDataURL(file)
+filereader.onload=()=>{
+  resolve(filereader.result)
+}
+filereader.onerror=(err)=>{
+  reject(err)
+}
+})
+}
   return (
     <>
 
@@ -99,6 +115,11 @@ function Header() {
               <li className="nav-item">
                 <a className="nav-link text-dark" onClick={blogs}>Blogs</a>
               </li>
+              <li className="nav-item">
+              <a className="nav-link text-dark" onClick={blogs}><input type='file' onChange={(e)=>{
+                upload(e)
+              }} /></a>
+            </li>
               <li className="nav-item">
 
                 <div className="dropdown">
