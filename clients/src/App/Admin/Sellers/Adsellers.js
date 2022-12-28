@@ -2,12 +2,12 @@ import React from 'react'
 import Sidebar from '../Sidebar'
 
 function Adsellers() {
-  return (
-    <>
-      <div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
-        <Sidebar />
-              {/* Main content */}
-              <div className="h-screen flex-grow-1 overflow-y-lg-auto">
+    return (
+        <>
+            <div className="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+                <Sidebar />
+                {/* Main content */}
+                <div className="h-screen flex-grow-1 overflow-y-lg-auto">
                     {/* Header */}
                     <header className="bg-surface-primary border-bottom pt-6">
                         <div className="container-fluid">
@@ -30,21 +30,60 @@ function Adsellers() {
                                                 <span className=" pe-2">
                                                     <i className="bi bi-plus" />
                                                 </span>
-                                                <span>Add Client</span>
+
+
+
+                                                <div>
+
+                                                    <span>
+                                                        {/* Button trigger modal */}
+                                                        <span type="button" data-toggle="modal" data-target="#exampleModal">
+                                                            Add Client
+                                                        </span>
+                                                        {/* Modal */}
+                                                        <div className="modal fade" id="exampleModal" tabIndex={-1} role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div className="modal-dialog" role="document">
+                                                                <div className="modal-content">
+                                                                    <div className="modal-header">
+                                                                        <h5 className="modal-title" id="exampleModalLabel">Client Add</h5>
+
+                                                                    </div>
+
+
+                                                                    <div className="modal-body">
+                                                                        <p>Sellers And Clients Page</p>
+
+
+
+                                                                    </div>
+                                                                    <div className="modal-footer">
+                                                                        <span type="button" className="btn btn-secondary" data-dismiss="modal">Close</span>
+                                                                        <span type="button" className="btn btn-primary">Save changes</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </span>
+
+
+
+
+
+                                                </div>
                                             </a>
                                             <a href="#" className="btn">
                                                 <span className=" pe-2">
-                                                <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" className="avatar avatar-sm rounded-circle me-2" />
-                                                 
+                                                    <img alt="..." src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80" className="avatar avatar-sm rounded-circle me-2" />
+
                                                 </span>
-                                              
-                                            </a> 
-                                           
-                                          
+
+                                            </a>
+
+
                                         </div>
                                     </div>
                                 </div><br />
-                              
+
                             </div>
                         </div>
                     </header>
@@ -146,7 +185,7 @@ function Adsellers() {
                                     </div>
                                 </div>
                             </div> */}
-                            
+
                             <div className="card shadow border-0 mb-7">
                                 <div className="card-header">
                                     <h5 className="mb-0">Applications</h5>
@@ -190,10 +229,10 @@ function Adsellers() {
                                                 </td>
                                                 <td className="text-end">
                                                     <a href="#" className="btn btn-sm btn-neutral">View</a>
-                                                   
+
                                                 </td>
                                             </tr>
-                                           
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -204,9 +243,9 @@ function Adsellers() {
                         </div>
                     </main>
                 </div>
-      </div>
-    </>
-  )
+            </div>
+        </>
+    )
 }
 
 export default Adsellers
