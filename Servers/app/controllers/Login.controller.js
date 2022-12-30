@@ -14,7 +14,13 @@ const uuid = require("uuid").v4;
 
 const sendMail = require("../utils/sendEmail.util");
 const OtpUtil = require("../utils/otp.util")
+const multer = require('multer')
+var upload = multer({ dest: 'uploadimage' })
 
+
+const express = require("express");
+const router = express.Router();
+const uploadController = require("../controllers/upload");
 // LOGIN CLASS
 class Login {
     async signup(req, res) {
@@ -79,10 +85,10 @@ class Login {
                 'checkthisissecretkey', { expiresIn: '1d' }
             )
 
-            res.send({msg: "Register Success! Please activate your email to start."});
+            res.send({ msg: "Register Success! Please activate your email to start." });
 
         } catch (err) {
-            return res.send({ msg:err });
+            return res.send({ msg: err });
         }
     }
 
@@ -130,7 +136,34 @@ class Login {
         }
 
     }
+    // upload image using multer
+    async upload2(req, res) {
+        console.log('call api');
+        res.json({ message: 'uploaded' })
+    }
 
+    async multi_upload(req, res) {
+        multi_upload1(req, res, function (err) {
+            if (err instanceof multer.MulterError) {
+                // A Multer error occurred when uploading.
+                res.status(500).send({ error: { message: `Multer uploading error: ${err.message}` } }).end();
+                return;
+            } else if (err) {
+                // An unknown error occurred when uploading.
+                if (err.name == 'ExtensionError') {
+                    res.status(413).send({ error: { message: err.message } }).end();
+                } else {
+                    res.status(500).send({ error: { message: `unknown uploading error: ${err.message}` } }).end();
+                }
+                return;
+            }
+
+            // Everything went fine.
+            // show file `req.files`
+            // show body `req.body`
+            res.status(200).end('Your files uploaded.');
+        })
+    }
     // student signin information
     async signin(req, res) {
         try {
@@ -176,9 +209,9 @@ class Login {
     // Change password
     async changePassword(req, res) {
 
-        const { password, cpasswword } = req.body;
-        if (password && cpasswword) {
-            if (password !== cpasswword) {
+        const { password, cpassword } = req.body;
+        if (password && cpassword) {
+            if (password !== cpassword) {
                 res.send({ "status": "faild", msg: "New password and confirm password dosn't match" })
             } else {
                 //Hash password
@@ -190,6 +223,7 @@ class Login {
             res.senD({ "status": "failed", msg: "All feild are reqired" })
         }
     }
+
 
 
 }
