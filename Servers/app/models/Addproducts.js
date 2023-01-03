@@ -11,7 +11,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 
-const LoginSchema = Schema({
+const ProductSchema = Schema({
 
     Name: {
         type: String,
@@ -52,11 +52,11 @@ const LoginSchema = Schema({
 )
 
 // collection creation 
-const LoginModel = model('LOGIN', LoginSchema, "User Login");
+const productModel = model('PRODUCTS', ProductSchema, "Products");
 
 
 
 
 
-module.exports = LoginModel;
+module.exports = productModel;
 
