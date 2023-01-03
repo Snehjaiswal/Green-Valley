@@ -15,7 +15,7 @@ import Profiepage from "./App/Profile-Page/Userprofile";
 import Userprofile from "./App/Profile-Page/Userprofile";
 import Otpverify from "./App/Logins/Otpverify";
 import Login from "./App/Logins/Login";
-
+import Uploadfile from "./App/Header/Uploadfile";
 import Admin from './App/Admin/Adminapp'
 import Client from './App/Clients/Clientrouts'
 
@@ -43,6 +43,7 @@ function App() {
         <Route path="/grocerhome" element={<Grocerhome />} />
         <Route path="/profilePage" element={<Profiepage />} />
         <Route path="/otpverify" element={<Otpverify />} />
+        <Route path="/image" element={<Uploadfile/>}/>
         {!roleid ? <Route path="/login" element={<Login />} /> : ""}
 
 
