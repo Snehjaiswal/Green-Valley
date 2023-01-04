@@ -92,7 +92,29 @@ class Login {
         }
     }
 
+    async addproduct(req, res) {
+        try {
+            const { Name, password, product_id } = req.body
+            console.log(req.body);
+            // CHECK ALL FIELD IN FILL
+            if (!Name  || !password || !product_id)
+                return res.send({ msg: "Please fill in all fields." });
+            const newUser = new LoginModel({
+                Name,
+                
+                password,
+                isVerifyed: false,
 
+            })
+            await newUser.save();
+            console.log({ newUser });
+            res.send({msg:"done"})
+        }
+        catch (err) {
+            return res.send({ msg: err });
+
+        }
+    }
 
     //otp verifed
     async VerifyedOTP(req, res) {
@@ -165,6 +187,7 @@ class Login {
     //     })
     // }
     // student signin information
+
     async signin(req, res) {
         try {
             const { email, password } = req.body;
@@ -228,6 +251,7 @@ class Login {
 
 }
 // // email validation
+
 function validateEmail(email) {
     const re =
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

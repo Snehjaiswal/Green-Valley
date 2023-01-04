@@ -25,10 +25,10 @@ app.use("/api/login", require("./app/routes/Login.route"));
 app.use("/api/otp", require("./app/routes/otp.router"));
 
 app.get('/',(req,res)=>{
-  console.log("okk");
+  console.log("okk",'-----',res);
   res.send("okk")
 })
-const port = 7070
+const port = 7071
 // Server start
 app.listen(port, () =>
   console.log(`Server is running on http://127.0.0.1:${port}`)
