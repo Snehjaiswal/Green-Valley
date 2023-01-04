@@ -11,7 +11,7 @@ const LoginModel = require("../models/Login.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const uuid = require("uuid").v4;
-const AddModal= require("../models/Addproducts")
+const AddModal = require("../models/Addproducts")
 const sendMail = require("../utils/sendEmail.util");
 const OtpUtil = require("../utils/otp.util")
 const multer = require('multer')
@@ -93,22 +93,41 @@ class Login {
     }
 
     async addproduct(req, res) {
+
         try {
-            const { Name, password, product_id ,value} = req.body
+
+            const storage = multer.diskStorage({
+                destination: (req, file, cb) => cb(null, ".uploads"), // cb -> callback
+                filename: (req, file, cb) => {
+                    const uniqueName = `${Date.now()}-${Math.round(
+                        Math.random() * 1e9
+                    )}${path.extname(file.originalname)}`;
+                    cb(null, uniqueName);
+                },
+            });
+
+            var handleMultipartData = multer({
+                storage,
+                limits: { fileSize: 1000000 * 5 },
+            }).single("image");
+            const { Name, password, product_id, value ,Image} = req.body
             console.log(req.body);
+            handleMultipartData=req.body
+            console.log(handleMultipartData,'....................');
             // CHECK ALL FIELD IN FILL
-            if (!Name  || !password || !product_id || !value)
+            if (!Name || !password || !product_id || !value || ! Image)
                 return res.send({ msg: "Please fill in all fields." });
             const newUser1 = new AddModal({
                 Name,
                 value,
                 password,
+                s,
                 isVerifyed: false,
 
             })
             await newUser1.save();
-            console.log({ newUser1});
-            res.send({msg:"done"})
+            console.log({ newUser1 });
+            res.send({ msg: "done" })
         }
         catch (err) {
             return res.send({ msg: err });
