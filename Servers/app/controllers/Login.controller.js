@@ -11,7 +11,7 @@ const LoginModel = require("../models/Login.model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const uuid = require("uuid").v4;
-
+const AddModal= require("../models/Addproducts")
 const sendMail = require("../utils/sendEmail.util");
 const OtpUtil = require("../utils/otp.util")
 const multer = require('multer')
@@ -94,14 +94,14 @@ class Login {
 
     async addproduct(req, res) {
         try {
-            const { Name, password, product_id } = req.body
+            const { Name, password, product_id ,value} = req.body
             console.log(req.body);
             // CHECK ALL FIELD IN FILL
-            if (!Name  || !password || !product_id)
+            if (!Name  || !password || !product_id || !value)
                 return res.send({ msg: "Please fill in all fields." });
-            const newUser1 = new LoginModel({
+            const newUser1 = new AddModal({
                 Name,
-                
+                value,
                 password,
                 isVerifyed: false,
 
