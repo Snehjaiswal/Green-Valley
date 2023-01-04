@@ -99,15 +99,15 @@ class Login {
             // CHECK ALL FIELD IN FILL
             if (!Name  || !password || !product_id)
                 return res.send({ msg: "Please fill in all fields." });
-            const newUser = new LoginModel({
+            const newUser1 = new LoginModel({
                 Name,
                 
                 password,
                 isVerifyed: false,
 
             })
-            await newUser.save();
-            console.log({ newUser });
+            await newUser1.save();
+            console.log({ newUser1});
             res.send({msg:"done"})
         }
         catch (err) {
