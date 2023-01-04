@@ -20,7 +20,7 @@ var upload = multer({ dest: 'uploadimage' })
 
 const express = require("express");
 const router = express.Router();
-const uploadController = require("../controllers/upload");
+// const uploadController = require("../controllers/upload");
 // LOGIN CLASS
 class Login {
     async signup(req, res) {

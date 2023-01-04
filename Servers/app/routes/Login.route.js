@@ -7,7 +7,7 @@
 "use strict"
 
 const router = require("express").Router()
-const { signup , VerifyedOTP, signin ,changePassword,upload2, upload ,multi_upload,multipleUpload,uploadController}= require('../controllers/Login.controller')
+const { signup , VerifyedOTP, signin ,changePassword,upload2, upload ,uploadController}= require('../controllers/Login.controller')
 const {chaacngePasswordmiddleware } = require('../middlewares/auth')
 
 // Route level middleware -to
@@ -17,9 +17,9 @@ router.use('/changePassword',chaacngePasswordmiddleware)
 router.post('/signup',signup)
 router.post('/signin',signin)
 router.post('/VerifyedOTP', VerifyedOTP)
-router.post('/upload1',multi_upload)
+// router.post('/upload1',multi_upload)
 // router.post('/upload',single('image'), upload2)  
-router.post("/multiple-upload", uploadController.multipleUpload);
+// router.post("/multiple-upload", uploadController.multipleUpload);
 
 // Protected Routes
 router.post('/changePassword', changePassword)
