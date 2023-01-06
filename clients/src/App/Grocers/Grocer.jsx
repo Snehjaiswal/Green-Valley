@@ -46,16 +46,16 @@ function Grocer() {
                 <div className="img">
                   <img className='GroImg' src={a.imgUrl} alt="okk" />
                 </div>
-                <div className="infos">
+                <div className="infos" >
                   <div className="name">
                     <h2>{a.name}</h2>
-                    <h4>{a.username}</h4>
+                    <h4 >{a.username}</h4>
                   </div>
                   <p className="text">{a.work}
-
+                 
                   </p>
-                  <ul className="stats">
-                    <li>
+                  <ul className="stats" >
+                    <li  key="{a.username}">
                       <h3>{a.views}</h3>
                       <h4>Views</h4>
                     </li>
