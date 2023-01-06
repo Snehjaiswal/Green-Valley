@@ -13,8 +13,8 @@ const Cart = () => {
     removeItem,
     emptyCart
   } = useCart();
- localStorage.setItem('count',totalUniqueItems)
- localStorage.setItem('prize',cartTotal)
+  localStorage.setItem('count', totalUniqueItems)
+  localStorage.setItem('prize', cartTotal)
 
 
   if (isEmpty) return <h1 className="text-center">Cart is Empty</h1>;
@@ -54,7 +54,7 @@ const Cart = () => {
                     <td> {item.quantity}</td>
                     <td>
                       <button
-                        style={{ border: "2px solid red" }}
+                        style={{ border: "2px solid red", width: "20px" ,paddingRight:"25px"}}
                         className="btn btn-light ms-2"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity - 1)
@@ -63,7 +63,7 @@ const Cart = () => {
                         –
                       </button>
                       <button
-                        style={{ border: "2px solid #fcba03" }}
+                        style={{ border: "2px solid #fcba03", width: "20px" ,paddingRight:"25px"}}
                         className="btn btn-light ms-2"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity + 1)
@@ -72,6 +72,7 @@ const Cart = () => {
                         +
                       </button>
                       <button
+                        style={{ border: "2px solid #fcba03", width: "200px" }}
                         className="btn btn-dark ms-2"
                         onClick={() => removeItem(item.id)}
                       >
@@ -91,10 +92,14 @@ const Cart = () => {
           <h3>Total Price: Rs. {cartTotal}</h3>
         </div>
         <div className="col-auto ms-auto">
-          <button className="btn btn-danger m-2" onClick={() => emptyCart()}>
+          <button
+            style={{ border: "2px solid #fcba03", width: "200px", height: "50px" }}
+            className="btn btn-danger m-2" onClick={() => emptyCart()}>
             Clear Cart
           </button>
-          <button className="btn btn-primary m-2">Pay Now</button>
+          <button
+            style={{ border: "2px solid #fcba03", width: "200px", height: "50px" }}
+            className="btn btn-primary m-2">Pay Now</button>
         </div>
         {/* </div> */}
       </div>
