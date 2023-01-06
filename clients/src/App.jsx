@@ -31,9 +31,11 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<>< Home /><App1 /></>}></Route>
-        <Route path='/cart' element={<CartProvider>
+        <Route path='/cart' element={
+          <CartProvider>
           <Cart />
-        </CartProvider>}></Route>
+          </CartProvider>
+        }></Route>
 
         <Route path="/home" element={<Home />} />
         <Route path="/shop" element={<App1 />} />
